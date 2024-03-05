@@ -18,6 +18,7 @@ export async function query(sql, params = []) {
         return res.rows;
     } catch (err) {
         console.error(err);
+        throw err;
     } finally {
         // finally block is important to release the client from the pool so that it does not exhaust the resources of postgres. 
         client.release();
