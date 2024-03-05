@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Footer = () => {
+const AdvertisementBanner = () => {
 
     return (
         <footer className='bg-visa-blue'>
@@ -33,4 +33,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default AdvertisementBanner;
