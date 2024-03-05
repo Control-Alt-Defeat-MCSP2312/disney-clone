@@ -10,7 +10,7 @@ const AppContent = () => {
     if (state.loading) {
         return <p>Loading...</p>;
     }
- console.log(state)
+    console.log(state)
     return (
         <div>
             <h1 className='text-white'>Reviews</h1>
