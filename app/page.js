@@ -1,8 +1,13 @@
+'use client';
+
+import Container from "./components/Container";
+import React from 'react';
+
 export default function Home() {
 
   return (
-    <div class='flex flex-col justify-center items-center'>
-      <h1 className="text-3x1 font-bold underline">Hello World</h1>
+    <div className='flex flex-col justify-center items-center'>
+      <Container />
     </div>
   );
 }
