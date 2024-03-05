@@ -6,6 +6,7 @@ const AppContent = () => {
     const { state } = useAppContext();
    
 
+
     if (state.loading) {
         return <p>Loading...</p>;
     }
@@ -34,3 +35,4 @@ export default function Home() {
         </div>
     );
 }
+
