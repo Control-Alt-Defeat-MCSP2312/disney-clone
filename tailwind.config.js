@@ -6,6 +6,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'visa-blue': '#445fae',
+    },
     extend: {
       fontFamily: {
         sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
