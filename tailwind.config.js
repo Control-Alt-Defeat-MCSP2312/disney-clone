@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Avenir Next', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-.075em',
