@@ -1,7 +1,6 @@
 import React from 'react';
 import DisneyLogoComponent from '../../public/disney-store-logo.svg'
 
-
 const Header = ({ wishlistCount, bagCount }) => {
     // wishlistCount and bagCount are what I plan on using to update the number next to My Wish List / My Bag
     return (
