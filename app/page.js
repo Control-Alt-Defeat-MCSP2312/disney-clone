@@ -10,9 +10,9 @@ const AppContent = () => {
   }
   console.log(state)
   return (
-    <>
+    <div className='antialiased'>
       <ProductDetails />
-    </>
+    </div>
     // <div>
     //   <h1 className='text-white'>Reviews</h1>
     //   <ul>
