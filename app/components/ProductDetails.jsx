@@ -3,7 +3,7 @@ export default function ProductDetails() {
         <div className="product__details_background border-b-0">
             <div className="product__details_container border-b border-white mx-10">
                 <div className="product-details display: block m-0">
-                    <div className="product-tabs flex justify-between max-w-full p-0 pb-4 border-b-4 border-slate-100 my-10">
+                    <div className="product-tabs flex justify-between max-w-full p-0 pb-4 border-b-4 border-slate-200 my-10">
                         <button className="product-tabs__tab_active display: block position: relative w-auto mt-0 no-underline cursor-pointer">
                             <h2 className="product-tabs__header flex flex-row justify-center items-start p-0 mb-0 text-lg font-semibold font-sans leading-6">
                                 <div className="product-details-container display: block">
