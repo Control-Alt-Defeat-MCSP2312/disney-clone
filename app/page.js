@@ -1,12 +1,12 @@
 'use client'
 
 import { AppProvider, useAppContext } from './context';
+import Navbar from './components/navbar'; // Import Navbar
 
+// Define the AppContent component to display the reviews
 const AppContent = () => {
-    const { state } = useAppContext();
+    const { state } = useAppContext(); // 
    
-
-
     if (state.loading) {
         return <p>Loading...</p>;
     }
@@ -30,9 +30,9 @@ export default function Home() {
     return (
         <div>
             <AppProvider>
-                <AppContent />
+                {/* <AppContent />  */}
+                <Navbar />  {/*Display the navbar component*/}
             </AppProvider>
         </div>
     );
 }
-
