@@ -37,7 +37,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-white-800 p-4">
+    <nav className="fixed top-0 left-0 w-full bg-white p-4 z-10">
       <ul className="flex justify-between text-black">
         {menu.map((category) => (
           <li key={category.name}
