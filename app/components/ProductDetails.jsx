@@ -1,4 +1,5 @@
 export default function ProductDetails() {
+
     return (
         <div className="product__details_background border-b-0">
             <div className="product__details_container border-b border-white mx-10">
