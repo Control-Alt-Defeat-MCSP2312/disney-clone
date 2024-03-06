@@ -1,5 +1,5 @@
 import React from 'react';
-import DisneyLogoComponent from '../../public/disney-store-logo.svg'
+import DisneyLogoComponent from '../public/disney-store-logo.svg'
 
 
 const Header = ({ wishlistCount, bagCount }) => {

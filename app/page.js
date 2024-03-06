@@ -1,7 +1,10 @@
 'use client'
-import ProductDetails from './components/ProductDetails.jsx';
+// import ProductDetails from './components/ProductDetails.jsx';
 import { AppProvider, useAppContext } from './context';
-import Navbar from './components/navbar'; // Import Navbar
+import Navbar from './components/NavBar'; // Import Navbar
+import Header from './components/header'; // Import Header
+import DisneyLogoComponent from '../public/disney-store-logo.svg';
+import Footer from './components/Footer';
 
 // Define the AppContent component to display the reviews
 const AppContent = () => {
@@ -31,7 +34,10 @@ export default function Home() {
         <div>
             <AppProvider>
                 {/* <AppContent />  */}
-                <Navbar />  {/*Display the navbar component*/}
+                <Header />  
+                <Navbar /> 
+                {/* <ProductDetails /> */}
+                {/* <Footer /> */}
             </AppProvider>
         </div>
     );
