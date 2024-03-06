@@ -16,9 +16,6 @@ module.exports = {
       margin: {
         '10px': '10px',
       },
-      backgroundImage: {
-        'custom-gradient': 'linear-gradient(90deg, var(--color-start), var(--color-end))',
-      },
       fontSize: {
         'star': '.9375rem',
         xs: '.625rem',
@@ -32,6 +29,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        times: ['Times']
       },
       lineHeight: {
         'star': '1.3125rem',
@@ -41,11 +39,23 @@ module.exports = {
         '3px': '3px',
       },
       backgroundImage: {
+        'custom-gradient': 'linear-gradient(90deg, #0075e3 var(calc(var(4.5) / 5* 100%)), #cbe3f9 var(calc(var(4.5) / 5* 100%)));',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.clip-text': {
+          '-webkit-background-clip': 'text',
+          '-webkit-text-fill-color': 'transparent',
+        },
+      }
+
+      addUtilities(newUtilities)
+    }
+  ],
 };

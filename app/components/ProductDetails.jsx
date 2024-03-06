@@ -27,7 +27,8 @@ export default function ProductDetails() {
                                     <div className="ratings">
                                         <div className="BVInlineRatings-container text-xs">
                                             <div className="bv_main_container_row_flex flex flex-row justify-center cursor-default w-full">
-                                                <div className="bv_stars_component_container bg-custom-gradient ml-10px text-star leading-star before:content-['\2605\2605\2605\2605\2605'] before:tracking-3px before:bg-clip-text">
+                                                {/* Add linear gradient here   rating= 4.5 calc(var(4.5) / 5* 100%);*/}
+                                                <div className="bv_stars_component_container font-times bg-custom-gradient clip-text ml-10px text-star leading-star display: inline-block before:content-['\2605\2605\2605\2605\2605'] before:tracking-3px before:bg-clip-text">
                                                     <div className="stars "></div>
                                                 </div>
                                             </div>
