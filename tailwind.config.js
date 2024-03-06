@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'visa-blue': '#445fae',
+      },
+      fontFamily: {
+        sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+      letterSpacing: {
+        wider: '.08em',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
