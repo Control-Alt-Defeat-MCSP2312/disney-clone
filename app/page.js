@@ -10,20 +10,17 @@ const AppContent = () => {
   }
   console.log(state)
   return (
-    <>
-      <ProductDetails />
-    </>
-    // <div>
-    //   <h1 className='text-white'>Reviews</h1>
-    //   <ul>
-    //     {state.reviews.map((review) => {
-    //       console.log(review.text)
-    //       return (
-    //         <li key={review.id}>{review.review_body}</li>
-    //       )
-    //     })}
-    //   </ul>
-    // </div>
+    <div>
+      <h1 className='text-white'>Reviews</h1>
+      <ul>
+        {state.reviews.map((review) => {
+          console.log(review.text)
+          return (
+            <li key={review.id}>{review.review_body}</li>
+          )
+        })}
+      </ul>
+    </div>
   );
 };
 
