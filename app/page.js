@@ -1,6 +1,7 @@
 'use client'
 import ProductDetails from './components/ProductDetails.jsx';
 import { AppProvider, useAppContext } from './context';
+// import FirstComponent from './components/FirstComponent.jsx'
 
 const AppContent = () => {
   const { state } = useAppContext();
@@ -31,6 +32,9 @@ export default function Home() {
         <AppContent />
       </AppProvider>
     </div>
+    // <AppProvider>
+    //   <FirstComponent />
+    // </AppProvider>
   );
 }
 
