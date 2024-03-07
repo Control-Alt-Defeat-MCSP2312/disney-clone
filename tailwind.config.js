@@ -22,6 +22,8 @@ module.exports = {
         'zinc-grey': '#222',
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
+        'sign-up-hover': '#285ba3',
+        'footer-blue': '#4385E0',
       },
       margin: {
         '10px': '10px',
