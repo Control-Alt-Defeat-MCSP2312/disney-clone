@@ -40,4 +40,22 @@ export function ReviewProvider({ children }) {
     );
 }
 
+// Context for Product Details Button Bar
+export function ActiveProvider({ children }) {
+    const [isActive, setIsActive] = useState('shipping');
+
+    const changeIsActive = (id) => {
+        setIsActive(id);
+    }
+
+    return (
+        <AppContext.Provider value={{
+            isActive,
+            changeIsActive
+        }}>
+            {children}
+        </AppContext.Provider>
+    );
+}
+
 export default AppContext;
