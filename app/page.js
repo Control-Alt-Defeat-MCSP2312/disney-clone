@@ -5,36 +5,18 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import { ST } from 'next/dist/shared/lib/utils.js';
 
-const AppContent = () => {
-  const { state } = useAppContext();
-
-  if (state.loading) {
-    return <p>Loading...</p>;
-  }
-  console.log(state)
-  return (
-    <div>
-      <h1 className='text-white'>Reviews</h1>
-      <ul>
-        {state.reviews.map((review) => {
-          console.log(review.text)
-          return (
-            <li key={review.id}>{review.review_body}</li>
-          )
-        })}
-      </ul>
-    </div>
-  );
-};
+import { ActiveProvider } from './context/context.jsx';
 
 export default function Home() {
   return (
     <div className="antialiased">
-      <Header/>
-      <StickySidebar/>
-      <AdvertisementBanner/>
-      <ProductDetails/>
-      <Footer/>
+      <Header />
+      <StickySidebar />
+      <ActiveProvider>
+        <ProductDetails />
+      </ActiveProvider>
+      <AdvertisementBanner />
+      <Footer />
     </div>
 
   );
