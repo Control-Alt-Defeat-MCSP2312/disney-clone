@@ -12,6 +12,9 @@ module.exports = {
         'zinc-grey': '#222',
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
+        'load-more': '#7a7a7a',
+        'sign-up-hover': '#285ba3',
+        'footer-blue': '#4385E0',
       },
       margin: {
         '10px': '10px',
@@ -43,13 +46,7 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      colors: {
-        'visa-blue': '#445fae',
-        'sign-up-blue': '#0075e3',
-        'sign-up-hover': '#285ba3',
-        'footer-blue': '#4385E0',
-      },
+      }
     },
   },
   plugins: [
