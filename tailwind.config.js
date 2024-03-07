@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: ['after', 'before'],
+      display: ['after', 'before'],
+      height: ['after', 'before'],
+      width: ['after', 'before'],
+      position: ['after', 'before'],
+      bottom: ['after', 'before'],
+      left: ['after', 'before'],
+      letterSpacing: ['after', 'before'],
+      backgroundImage: ['after', 'before'],
+
       colors: {
         'visa-blue': '#445fae',
         'zinc-grey': '#222',
@@ -28,18 +38,22 @@ module.exports = {
         '5xl': '3.052rem',
       },
       fontFamily: {
-        sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Prompt', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       lineHeight: {
         'star': '1.3125rem',
+      },
+      spacing: {
+        '19px': '-19px',
+        '4px': '4px',
       },
       letterSpacing: {
         wider: '.08em',
         '3px': '3px',
       },
       backgroundImage: {
-        "custom-gradient": "linear-gradient(90deg, #0075e3 var(--percent), #cbe3f9 var(--percent))",
+        'custom-gradient': 'linear-gradient(90deg, #0075e3 var(--percent), #cbe3f9 var(--percent))',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -53,6 +67,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss-pseudo-elements'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.clip-text': {

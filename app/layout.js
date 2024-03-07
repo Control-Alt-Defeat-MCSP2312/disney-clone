@@ -1,7 +1,10 @@
-import { Inter } from "next/font/google";
+import { Inter, Prompt } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const prompt = Prompt({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ["latin"]
+});
 
 export const metadata = {
   title: "Magic World",
@@ -11,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={prompt.className}>{children}</body>
     </html>
   );
 }
