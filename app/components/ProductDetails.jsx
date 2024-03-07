@@ -1,4 +1,10 @@
+'use client'
+import { useState } from 'react'
 export default function ProductDetails() {
+    const [isActive, setIsActive] = useState('1');
+    const changeIsActive = (id) => {
+        setIsActive(id);
+    }
 
     return (
         <div className="product__details_background border-b-0">
@@ -6,21 +12,21 @@ export default function ProductDetails() {
                 <div className="product-details block m-0">
                     <div className="product-tabs flex justify-between max-w-full p-0 pb-4 border-b-4 border-slate-200 mb-10">
                         {/* active class give position relative */}
-                        <button className="product-tabs__tab_active block w-auto mt-0 no-underline cursor-pointer p-0">
-                            <h2 className="product-tabs__header flex flex-row justify-center items-start p-0 mb-0 text-lg font-semibold text-zinc-grey font-sans leading-6">
+                        <button id="details" className="product-tabs__tab_active relative block w-auto mt-0 no-underline cursor-pointer p-0 after:content-[''] after:h-4px after:w-full after:absolute after:bottom-19px after:left-0 after:bg-start-color">
+                            <h2 className="product-tabs__header flex font-semibold flex-row justify-center items-start p-0 mb-0 text-lg text-zinc-grey font-sans leading-6">
                                 <div className="product-details-container flex">
                                     <span className="product__details text-lg leading-6 tracking-wider uppercase font-bold">Product Details</span>
                                 </div>
                             </h2>
                         </button>
-                        <button className="product-tabs__tab_active block w-auto mt-0 no-underline cursor-pointer p-0">
+                        <button id="shipping" className="product-tabs__tab_active block w-auto mt-0 no-underline cursor-pointer p-0">
                             <h2 className="product-tabs__header flex flex-row justify-center items-start p-0 mb-0 text-lg font-semibold text-zinc-grey font-sans leading-6">
                                 <div className="product-details-container flex">
                                     <span className="product__details text-lg leading-6 tracking-wider uppercase font-bold">Shipping & Delivery</span>
                                 </div>
                             </h2>
                         </button>
-                        <button className="product-tabs__tab_active block w-auto mt-0 no-underline cursor-pointer p-0">
+                        <button id="reviews" className="product-tabs__tab_active block w-auto mt-0 no-underline cursor-pointer p-0">
                             <h2 className="product-tabs__header flex flex-row justify-center items-start p-0 mb-0 text-lg font-semibold text-zinc-grey font-sans leading-6">
                                 <div className="product-details-container flex">
                                     <span className="product__details text-lg leading-6 tracking-wider uppercase font-bold">Reviews</span>

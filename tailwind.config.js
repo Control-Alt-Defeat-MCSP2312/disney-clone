@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: ['after', 'before'],
+      display: ['after', 'before'],
+      height: ['after', 'before'],
+      width: ['after', 'before'],
+      position: ['after', 'before'],
+      bottom: ['after', 'before'],
+      left: ['after', 'before'],
+      letterSpacing: ['after', 'before'],
+      backgroundImage: ['after', 'before'],
+
       colors: {
         'visa-blue': '#445fae',
         'zinc-grey': '#222',
@@ -28,11 +38,15 @@ module.exports = {
         '5xl': '3.052rem',
       },
       fontFamily: {
-        sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Prompt', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       lineHeight: {
         'star': '1.3125rem',
+      },
+      spacing: {
+        '19px': '-19px',
+        '4px': '4px',
       },
       letterSpacing: {
         wider: '.08em',
@@ -47,6 +61,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss-pseudo-elements'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.clip-text': {
