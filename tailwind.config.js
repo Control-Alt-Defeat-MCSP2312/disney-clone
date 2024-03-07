@@ -66,7 +66,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-pseudo-elements'),
-    require('tailwindcss-pseudo-elements'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.clip-text': {
