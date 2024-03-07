@@ -40,11 +40,7 @@ module.exports = {
         '5xl': '3.052rem',
       },
       fontFamily: {
-<<<<<<< Updated upstream
         sans: ['Prompt', 'Helvetica', 'Arial', 'sans-serif'],
-=======
-        sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
->>>>>>> Stashed changes
         times: ['Times']
       },
       lineHeight: {
