@@ -1,7 +1,7 @@
 'use client'
 import { createContext, useState } from 'react';
 
-// Import AppContext into your component along with useContent to access state
+// Import AppContext into your component along with useContext to access state
 const AppContext = createContext();
 
 /****************Context functions****************/

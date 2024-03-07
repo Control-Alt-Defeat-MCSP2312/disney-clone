@@ -10,7 +10,7 @@ const SingleReview = ({ review }) => {
             stars.push(
                 <span
                     key={i}
-                    className={i <= rating ? 'text-sign-up-blue' : 'text-gray-300'}
+                    className={i <= rating ? 'text-start-color' : 'text-gray-300'}
                 >
                     &#9733;
                 </span>
@@ -62,7 +62,7 @@ const SingleReview = ({ review }) => {
     }
 
     return (
-        <div className='flex flex-col my-4 mx-4'>
+        <div className='flex flex-col my-4 mx-4 font-sans'>
             <div className='flex justify-between'>
                 <div className='my-2'>
                     <span>{starRating(review.rating)}</span>
