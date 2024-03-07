@@ -71,17 +71,20 @@ const SingleReview = ({ review }) => {
                 </div>
                 <span>employee</span>
             </div>
-            <div className='flex justify-start my-2'>{review.title}</div>
+            <div className='flex justify-start my-2 font-bold'>{review.title}</div>
             <div className='flex justify-start my-2'>{review.review_body}</div>
             {/* Conditionally render based on whether or not recommended */}
-            {review.recommended === true && ( <div className='flex justify-start my-2'>Recommended ✔ Yes</div>)}
+            {review.recommended === true && ( <div className='flex justify-start my-2'><b>Recommends this product ✔</b> Yes</div>)}
             <div className='flex justify-start my-2'>
-                <span>Helpful?</span>
-                <button className='mx-2'>Yes • {review.helpful_yes}</button>
-                <button className='mx-2'>No • {review.helpful_no}</button>
-                <button className='mx-2'>Report</button>
+                <div className='pl-0.5 pr-2.5 pt-0.5'>
+                    <span>Helpful?</span>
+                </div>
+                <button className='cursor-pointer text-start-color bg-helpful-color mr-5px px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>Yes • {review.helpful_yes}</span></button>
+                <button className='cursor-pointer text-start-color bg-helpful-color px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>No • {review.helpful_no}</span></button>
+                <button className='cursor-pointer text-start-color bg-helpful-color px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>Report</span></button>
             </div>
         </div>
+        
     )
 }
 

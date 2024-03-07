@@ -76,20 +76,22 @@ const Reviews = () => {
 
     return (
         <div className='flex flex-col'>
-            <div className='flex justify-end'>
-                <button className='bg-start-color text-white mx-4'>Write a review</button>
+            <div className='write-review-button pb-5 flex justify-end'>
+                <button className='bg-start-color text-white py-2 px-4 rounded-full'>Write a review</button>
             </div>
-            <div className='flex justify-between'>
-                {/* Figure out how to turn 8 into number of SingleReview components currently being displayed (Conditional Rendering?)*/}
-                <span className='mx-4'>1-{displayedCount} of {reviews.reviews.length} Reviews</span>
+            <div className='review-display-bar flex justify-between pb-2.5'>
+                <span className='mx-4'>1 - {displayedCount} of {reviews.reviews.length} Reviews</span>
                 {/* Implement drop down menu on hover, click turns on/off as well, set sortBy state depending on what is clicked, changes order components are rendered. */}
-                <div className='relative'>
-                    <div
-                        className='cursor-pointer mx-4'
-                        onMouseEnter={handleDropdownToggle}
-                        onClick={() => setDropdownToggle(false)}
-                    >
-                        Sort by: {sortByDisplay(sortBy)}
+                <div className='sort-by relative pl-2.5 pb-2.5 pt-2.5 pr-25px'>
+                    <div className='flex'>
+                        <div
+                            className='cursor-pointer flex'
+                            onMouseEnter={handleDropdownToggle}
+                            onClick={() => setDropdownToggle(false)}
+                        >
+                            <span>Sort by: {sortByDisplay(sortBy)}</span>
+                        </div>
+                        <span className='text-xs font-times ml-1 mt-1'>&#9660;</span>
                     </div>
                     {dropdownToggle && (
                     

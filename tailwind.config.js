@@ -25,9 +25,18 @@ module.exports = {
         'load-more': '#7a7a7a',
         'sign-up-hover': '#285ba3',
         'footer-blue': '#4385E0',
+        'helpful-color': '#ebf6fc'
       },
       margin: {
         '10px': '10px',
+        '5px': '5px',
+      },
+      padding: {
+        '5px': '5px',
+        '25px': '25px',
+      },
+      boxShadow: {
+        'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'
       },
       fontSize: {
         'star': '.9375rem',
