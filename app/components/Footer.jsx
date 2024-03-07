@@ -79,7 +79,7 @@ const Footer = () => {
                             <li><a href='https://www.disneystore.com/personalization/' className='hover:text-footer-blue'>Personalization Shop</a></li>
                         </ul>
                         <ul>
-                            <li><a href='https://www.disneystore.com/d23-the-official-disney-fan-club/' className='hover:text-footer-blue'>D23</a></li>
+                            <li><a href='https://www.disneystore.com/d23-the-official-disney-fan-club/' className='hover:text-footer-blue'>M23</a></li>
                             <li><a href='https://jobs.disneycareers.com/' className='hover:text-footer-blue'>Careers</a></li>
                             <li><a href='https://www.disneystore.com/site-map.html' className='hover:text-footer-blue'>Site Map</a></li>
                             <li><a href='https://www.disneystore.com/new-content/' className='hover:text-footer-blue'>New</a></li>
