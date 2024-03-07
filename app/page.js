@@ -29,13 +29,14 @@ const AppContent = () => {
 
 export default function Home() {
   return (
-    <div>
+    <div className="antialiased">
       <Header/>
       <StickySidebar/>
       <AdvertisementBanner/>
       <ProductDetails/>
       <Footer/>
     </div>
+
   );
 }
 
