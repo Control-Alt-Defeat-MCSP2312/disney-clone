@@ -43,6 +43,7 @@ module.exports = {
       },
       lineHeight: {
         'star': '1.3125rem',
+        'review-number': '1.375rem'
       },
       spacing: {
         '19px': '-19px',
