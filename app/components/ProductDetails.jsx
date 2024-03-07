@@ -9,7 +9,7 @@ export default function ProductDetails() {
         changeIsActive(e.currentTarget.id);
     }
 
-
+    // const [productDetailText, setProductDetailText] = useState('')
     return (
         <div className="product__details_background border-b-0">
             <div className="product__details_container border-b border-white mx-10">
@@ -30,7 +30,7 @@ export default function ProductDetails() {
                                 </div>
                             </h2>
                         </button>
-                        <button id="reviews" onClick={handleClick} className={`product-tabs__tab block w-auto mt-0 no-underline cursor-pointer p-0 ${isActive === "reviews" ? " relative after:content-[''] after:h-4px after:w-full after:absolute after:bottom-19px after:left-0 after:bg-start-color" : ""}`}>
+                        <button id="reviews" onClick={handleClick} className={`product-tabs__tab block w-auto mt-0 no-underline cursor-pointer p-0 ${isActive === "reviews" ? "relative after:content-[''] after:h-4px after:w-full after:absolute after:bottom-19px after:left-0 after:bg-start-color" : ""}`}>
                             <h2 className="product-tabs__header flex flex-row justify-center items-start p-0 mb-0 text-lg font-semibold text-zinc-grey font-sans leading-6">
                                 <div className="product-details-container flex">
                                     <span className="product__details text-lg leading-6 tracking-wider uppercase font-bold">Reviews</span>
@@ -45,6 +45,43 @@ export default function ProductDetails() {
                                 </div>
                             </h2>
                         </button>
+                    </div>
+                    <div className="products-tabs-details-container relative max-w-full pl-0 font-normal">
+                        <div className="read-more-show relative">
+                            <div className={`wrapper-collapsed max-h-300px mb-15px overflow-hidden text-lg leading-6 text-left ${isActive === "details" ? "after:absolute after:content-[''] after:w-full after:h-5 after:bg-white" : ""}`}>
+                                <p className="text-header visible text-xl leading-7 w-auto mb-0 pb-10px"></p>
+                                <p aria-hidden="false" className="visible mb-4">
+                                    Relive the adventure of <em aria-hidden="false" className="visible">Star Wars: The Force Awakens</em>
+                                    with some of your favorite heroes (and antihero) featured on this simulated leather backpack by Loungefly.
+                                    Dramatic screen art on the front shows three different scenes inspired by the film: Poe Dameron on&nbsp;Ajan Kloss,
+                                    Finn battling Kylo Ren on the Starkiller base, and Rey Skywalker with BB-8 on Jakku. Part of the Disney100 Decades:
+                                    The 2010s Collection, this stylish carryall celebrates the film with style and substance thanks to a double zip main compartment,
+                                    two front zip pockets, side slip pockets and interior lining featuring a repeat of the colorful screen art.&nbsp;&nbsp;
+                                </p>
+                                <p aria-hidden="false" className="separator visible mb-4 "></p>
+                                <label aria-hidden="false" className="prod-description-label visible font-semibold mb-2 inline-block">Magic in the details</label>
+                                <p aria-hidden="false" className="prod-content visible mb-0 "></p>
+                                <ul aria-hidden="false" className="visible w-588px mb-4 list-disc list-inside">
+                                    <li aria-hidden="false" className="visible">Simulated leather backpack</li>
+                                    <li aria-hidden="false" className="visible">Screen art on front features scenes from <em> Star Wars: The Force Awakens</em></li>
+                                    <li aria-hidden="true" className="invisible">Characters include Poe Dameron, Finn and Kylo Ren, Rey Skywalker and BB-8</li>
+                                    <li aria-hidden="true" className="invisible"><em>Star Wars: The Force Awakens</em> screen logo on back</li>
+                                    <li aria-hidden="true" className="invisible">Double zipper main compartment</li>
+                                    <li aria-hidden="true" className="invisible">Two front zip pockets</li>
+                                    <li aria-hidden="true" className="invisible">Side slip pockets</li>
+                                    <li aria-hidden="true" className="invisible">Loungefly logo metal pulls</li>
+                                    <li aria-hidden="true" className="invisible">Goldtone hardware</li>
+                                    <li aria-hidden="true" className="invisible">Adjustable straps with padded shoulders</li>
+                                    <li aria-hidden="true" className="invisible">Top carry loop</li>
+                                    <li aria-hidden="true" className="invisible">Same screen art featured on lining</li>
+                                    <li aria-hidden="true" className="invisible">Disney100 Decades label on back</li>
+                                    <li aria-hidden="true" className="invisible"><em>Star Wars</em> Loungefly logo label plate on front</li>
+                                    <li aria-hidden="true" className="invisible">Inspired by<em> Star Wars: The Force Awakens</em> (2015)&nbsp;&nbsp;</li>
+                                    <li aria-hidden="true" className="invisible">Part of the Disney100 Decades: The 2010s Collection</li>
+                                    <li aria-hidden="true" className="invisible">Part of the Disney100 Celebration Collections</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

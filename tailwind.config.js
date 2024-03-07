@@ -50,6 +50,10 @@ module.exports = {
       spacing: {
         '19px': '-19px',
         '4px': '4px',
+        '10px': '10px',
+        '15px': '15px',
+        '300px': '300px',
+        '588px': '588px',
       },
       letterSpacing: {
         wider: '.08em',
