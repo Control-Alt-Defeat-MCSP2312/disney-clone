@@ -2,14 +2,16 @@
 import React from 'react';
 import ProductDetails from './components/ProductDetails.jsx';
 import Header from './components/Header.jsx';
-import { ReviewProvider } from './context/context';
+import { ActiveProvider } from './context/context.jsx';
 
 export default function Home() {
   return (
-    <ReviewProvider>
-        <Header />
+    <div className="antialiased">
+      <Header />
+      <ActiveProvider>
         <ProductDetails />
-    </ReviewProvider>
+      </ActiveProvider>
+    </div>
   );
 }
 

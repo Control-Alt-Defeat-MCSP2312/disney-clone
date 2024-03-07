@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: ['after', 'before'],
+      display: ['after', 'before'],
+      height: ['after', 'before'],
+      width: ['after', 'before'],
+      position: ['after', 'before'],
+      bottom: ['after', 'before'],
+      left: ['after', 'before'],
+      letterSpacing: ['after', 'before'],
+      backgroundImage: ['after', 'before'],
+
       colors: {
         'visa-blue': '#445fae',
         'zinc-grey': '#222',
@@ -36,20 +46,26 @@ module.exports = {
       },
       lineHeight: {
         'star': '1.3125rem',
+        'review-number': '1.375rem'
+      },
+      spacing: {
+        '19px': '-19px',
+        '4px': '4px',
       },
       letterSpacing: {
         wider: '.08em',
         '3px': '3px',
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(90deg, #0075e3 var(calc(var(4.5) / 5* 100%)), #cbe3f9 var(calc(var(4.5) / 5* 100%)));',
+        'custom-gradient': 'linear-gradient(90deg, #0075e3 var(--percent), #cbe3f9 var(--percent))',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      }
+      },
     },
   },
   plugins: [
+    require('tailwindcss-pseudo-elements'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.clip-text': {
