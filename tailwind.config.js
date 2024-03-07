@@ -31,7 +31,7 @@ module.exports = {
         '5xl': '3.052rem',
       },
       fontFamily: {
-        sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Prompt', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       lineHeight: {

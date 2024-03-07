@@ -1,3 +1,6 @@
+import Shipping from "./Shipping"
+import Reviews from "./Reviews"
+
 export default function ProductDetails() {
     
     return (
@@ -38,6 +41,7 @@ export default function ProductDetails() {
                             </h2>
                         </button>
                     </div>
+                    <Reviews />
                 </div>
             </div>
         </div>
