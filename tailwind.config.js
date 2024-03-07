@@ -13,6 +13,10 @@ module.exports = {
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
       },
+      zIndex: {
+        '900': '900',
+        '2500': '2500',  // Assuming you want to use 2500 as a custom z-index
+      },
       margin: {
         '10px': '10px',
       },

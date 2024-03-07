@@ -1,9 +1,9 @@
+'use client'
 import React, { useState } from 'react';
 
 function Navbar() {
   // Local state to track the active dropdown
   const [activeDropdown, setActiveDropdown] = useState(null);
-
   const menu = [
     {
       name: 'NEW & TRENDING',
@@ -28,8 +28,8 @@ function Navbar() {
           name: 'DISNEY PARK',
           items: ['Disneyland', 'Walt Disney World'],
           additional: [  // Additional subcategories within DISNEY PARK column
-            { name: 'GIFT CARDS', items: ['null'] },  // Replace with actual items
-            { name: 'SHOP ALL NEW & TRENDING', items: ['null'] },  // Replace with actual items
+            { name: 'GIFT CARDS', items: ['null'] },  // 
+            { name: 'SHOP ALL NEW & TRENDING', items: ['null'] },  // 
           ],
         },
       ],
@@ -37,7 +37,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white p-4 z-10">
+    <nav className="bg-white text-black inset-x-0 top-0 max-w-full overflow-auto border-t border-gray-100 flex justify-start z-[2500] leading-6">
       <ul className="flex justify-between text-black">
         {menu.map((category) => (
           <li key={category.name}
