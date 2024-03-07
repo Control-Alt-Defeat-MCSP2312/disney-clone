@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "@svgr/webpack": "^8.1.0",
     "antd": "^5.15.1",
     "dotenv": "^16.4.5",
