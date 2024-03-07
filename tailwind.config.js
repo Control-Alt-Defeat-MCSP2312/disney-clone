@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '95': '2400px', // Custom width value
+        '39': '156px',  // Custom height value
+      },
       colors: {
         'visa-blue': '#445fae',
         'zinc-grey': '#222',
@@ -34,6 +38,13 @@ module.exports = {
       fontFamily: {
         sans: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
+      },
+      borderColor: theme => ({
+        DEFAULT: theme('colors.gray.200', 'currentColor'),
+        custom: 'rgba(0, 0, 0, 0.1)',
+      }),
+      borderWidth: {
+        '1.25': '1.25px', // Add custom border-width here
       },
       lineHeight: {
         'star': '1.3125rem',
