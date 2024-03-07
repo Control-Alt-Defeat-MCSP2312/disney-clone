@@ -62,12 +62,12 @@ const SingleReview = ({ review }) => {
     }
 
     return (
-        <div className='flex flex-col my-4 mx-4 font-sans'>
+        <div className='flex flex-col my-4 mx-4'>
             <div className='flex justify-between'>
-                <div className='my-2 font-sans'>
-                    <span>{starRating(review.rating)}</span>
-                    <span className='mx-2'>{review.username}</span>
-                    <span className='mx-2'>{dateCalculator(review)}</span>
+                <div className='my-2'>
+                    <span>{starRating(review.rating)} {review.username} • {dateCalculator(review)}</span>
+                    {/* <span className='mx-2'>{review.username}</span>
+                    <span className='mx-2'>{dateCalculator(review)}</span> */}
                 </div>
                 <span>employee</span>
             </div>
