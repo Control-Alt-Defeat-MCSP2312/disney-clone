@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { AppContext} from "../../context/context"
+// import { AppContext} from "../../context/context"
 
 const product = {
     name: "Star Wars: The Force Awakens Loungefly Backpack – Disney100",
@@ -16,7 +16,7 @@ const product = {
   };
 
 const AddToBagbutton = () => {
-  const { addCartClicked, setAddCartClicked } = useContext(AppContext);
+  // const { addCartClicked, setAddCartClicked } = useContext(AppContext);
 
   const handleButtonClick = (e) => {
     setAddCartClicked(true);
