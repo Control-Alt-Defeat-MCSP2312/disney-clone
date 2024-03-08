@@ -20,7 +20,7 @@ const Reviews = () => {
     }, [reviews.reviews, displayedCount])
 
     // Set total item reviews and how many reviews to display initially
-    const totalReviews  = reviews.reviews.length; // 10
+    const totalReviews = reviews.reviews.length; // 10
     const reviewsPerPage = 8;
 
     // Function for Load More button to display more reviews
@@ -30,7 +30,7 @@ const Reviews = () => {
     }
 
     const handleDropdownToggle = () => {
-        
+
         setDropdownToggle(!dropdownToggle);
     }
 
@@ -94,17 +94,17 @@ const Reviews = () => {
                         <span className='text-xs font-times ml-1 mt-1'>&#9660;</span>
                     </div>
                     {dropdownToggle && (
-                    
-                    <div className='absolute bg-white border border-gray-300'>
-                        <div onClick={() => handleSortingChange('most-helpful')}>Most Helpful</div>
-                        <div onClick={() => handleSortingChange('high-to-low')}>Highest to Lowest Rating</div>
-                        <div onClick={() => handleSortingChange('low-to-high')}>Lowest to Highest Rating</div>
-                        <div onClick={() => handleSortingChange('most-recent')}>Most Recent</div>
-                    </div>)}
+
+                        <div className='absolute bg-white border border-gray-300'>
+                            <div onClick={() => handleSortingChange('most-helpful')}>Most Helpful</div>
+                            <div onClick={() => handleSortingChange('high-to-low')}>Highest to Lowest Rating</div>
+                            <div onClick={() => handleSortingChange('low-to-high')}>Lowest to Highest Rating</div>
+                            <div onClick={() => handleSortingChange('most-recent')}>Most Recent</div>
+                        </div>)}
                 </div>
             </div>
             {displayedReviews.map((review) => {
-                    return <SingleReview key={review.id} review={review} />
+                return <SingleReview key={review.id} review={review} />
             })}
             <div className='flex justify-center'>
                 <button className='text-black bg-load-more w-64 rounded-x1 my-8' onClick={handleLoadMore}>Load more</button>
