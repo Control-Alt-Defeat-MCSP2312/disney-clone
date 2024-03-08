@@ -19,18 +19,35 @@ module.exports = {
 
       colors: {
         'visa-blue': '#445fae',
-        'zinc-grey': '#222',
+        'zinc-grey': '#222222db',
+        'zinc-grey-header': '#222',
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
+        'load-more': '#7a7a7a',
         'sign-up-hover': '#285ba3',
         'footer-blue': '#4385E0',
+        'prop-details-grey': '#6a7889',
+        'deep-grey': '#444',
+        'helpful-color': '#ebf6fc',
       },
       margin: {
         '10px': '10px',
+        '5px': '5px',
+      },
+      padding: {
+        '5px': '5px',
+        '10px': '10px',
+        '15px': '15px',
+        '25px': '25px',
+        '30px': '30px',
+      },
+      boxShadow: {
+        'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'
       },
       fontSize: {
         'star': '.9375rem',
         xs: '.625rem',
+        s: '.75rem',
         sm: '0.8rem',
         base: '1rem',
         xl: '1.25rem',
@@ -38,28 +55,49 @@ module.exports = {
         '3xl': '1.953rem',
         '4xl': '2.441rem',
         '5xl': '3.052rem',
+        'smol': '17px',
       },
       fontFamily: {
-        sans: ['Prompt', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
+      },
+      fontWeight: {
+        '500': '500',
       },
       lineHeight: {
         'star': '1.3125rem',
-        'review-number': '1.375rem'
+        'review-number': '1.375rem',
       },
       spacing: {
+        'neg-30px': '-30px',
+        'neg-15': '-15px',
         '19px': '-19px',
         '4px': '4px',
+        '10px': '10px',
+        '15px': '15px',
+        '30px': '30px',
+        '113px': '113px',
+        '300px': '300px',
+        '346px': '346px',
+        '384px': '384px',
+        '424px': '424px',
+        '588px': '588px',
       },
       letterSpacing: {
         wider: '.08em',
         '3px': '3px',
+        '.048px': '.048px',
       },
       backgroundImage: {
+        'sticky-gradient': 'linear-gradient(144.33deg, #f8f8f8 28.01%, #fff 98.8%)',
         'custom-gradient': 'linear-gradient(90deg, #0075e3 var(--percent), #cbe3f9 var(--percent))',
+        'read-more-gradient': 'linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff)',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      zIndex: {
+        '899': '899',
       },
     },
   },
