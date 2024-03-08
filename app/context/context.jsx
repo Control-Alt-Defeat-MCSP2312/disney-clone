@@ -63,4 +63,23 @@ export function ActiveProvider({ children }) {
     );
 }
 
+
+
+export const StickySidebarProvider = ({children}) => {
+    const [favoriteClicked, setFavoriteClicked] = useState(false);
+    const [addCartClicked, setAddCartClicked] = useState(false);
+
+    return (
+        <AppContext.Provider
+          value={{
+            favoriteClicked,
+            addCartClicked,
+            setFavoriteClicked,
+            setAddCartClicked,
+          }}
+        >
+          {children}
+        </AppContext.Provider>
+      );
+    };
 export default AppContext;
