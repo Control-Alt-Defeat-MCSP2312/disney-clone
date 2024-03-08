@@ -62,17 +62,18 @@ const SingleReview = ({ review }) => {
     }
 
     return (
-        <div className='flex flex-col my-4 mx-4'>
+        <>
+        <div className='flex flex-col my-4 mx-4 font-AvenirNext'>
             <div className='flex justify-between'>
-                <div className='my-2'>
+                <div className='my-2 font-AvenirNext'>
                     <span>{starRating(review.rating)} {review.username} • {dateCalculator(review)}</span>
                     {/* <span className='mx-2'>{review.username}</span>
                     <span className='mx-2'>{dateCalculator(review)}</span> */}
                 </div>
                 <span>employee</span>
             </div>
-            <div className='flex justify-start my-2 font-bold'>{review.title}</div>
-            <div className='flex justify-start my-2'>{review.review_body}</div>
+            <div className='flex justify-start my-2 font-bold font-AvenirNext'>{review.title}</div>
+            <div className='flex justify-start my-2 font-AvenirNext'>{review.review_body}</div>
             {/* Conditionally render based on whether or not recommended */}
             {review.recommended === true && ( <div className='flex justify-start my-2'><b>Recommends this product ✔</b> Yes</div>)}
             <div className='flex justify-start my-2'>
@@ -84,6 +85,25 @@ const SingleReview = ({ review }) => {
                 <button className='cursor-pointer text-start-color bg-helpful-color px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>Report</span></button>
             </div>
         </div>
+        {/* <div className='bv-content-item flex flex-col pt-2.5 pb-5'>
+            <div className='bv-content-item-avatar-offset-off'>
+                <div className='bv-content-container'>
+                    <div className='bv-content-header py-5'></div>
+                        <div className='bv-content-header-meta my-0.5'>
+                            <span className='bv-content-rating'>
+                                <span className='bv-rating-stars-container mr-1'></span>
+                            </span>
+                            <div className='bv-content-meta-wrapper'
+                        </div>
+                    <div className='bv-content-details-offset-off'></div>
+                </div>
+                <div className='bv-content-actions-container'></div>
+                <div className='bv-secondary-content-list'></div>
+            </div>
+        </div> */}
+        </>
+
+
         
     )
 }

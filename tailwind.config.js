@@ -33,6 +33,7 @@ module.exports = {
       },
       padding: {
         '5px': '5px',
+        '10px': '10px',
         '25px': '25px',
       },
       boxShadow: {
