@@ -1,6 +1,7 @@
 'use client'
 import { useContext } from 'react';
-import AppContext from '../context/context.jsx';
+import AppContext, { ReviewProvider } from '../context/context.jsx';
+import Reviews from './Reviews';
 
 export default function ProductDetails() {
     const { changeIsActive, isActive } = useContext(AppContext)

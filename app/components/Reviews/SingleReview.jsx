@@ -10,7 +10,7 @@ const SingleReview = ({ review }) => {
             stars.push(
                 <span
                     key={i}
-                    className={i <= rating ? 'text-sign-up-blue' : 'text-gray-300'}
+                    className={i <= rating ? 'text-start-color' : 'text-gray-300'}
                 >
                     &#9733;
                 </span>
@@ -62,26 +62,77 @@ const SingleReview = ({ review }) => {
     }
 
     return (
-        <div className='flex flex-col my-4 mx-4'>
+        <>
+        <div className='flex flex-col my-4 mx-4 font-AvenirNext'>
             <div className='flex justify-between'>
-                <div className='my-2'>
-                    <span>{starRating(review.rating)}</span>
-                    <span className='mx-2'>{review.username}</span>
-                    <span className='mx-2'>{dateCalculator(review)}</span>
+                <div className='my-2 font-AvenirNext'>
+                    <span>{starRating(review.rating)} {review.username} • {dateCalculator(review)}</span>
+                    {/* <span className='mx-2'>{review.username}</span>
+                    <span className='mx-2'>{dateCalculator(review)}</span> */}
                 </div>
                 <span>employee</span>
             </div>
-            <div className='flex justify-start my-2'>{review.title}</div>
-            <div className='flex justify-start my-2'>{review.review_body}</div>
+            <div className='flex justify-start my-2 font-bold font-AvenirNext'>{review.title}</div>
+            <div className='flex justify-start my-2 font-AvenirNext'>{review.review_body}</div>
             {/* Conditionally render based on whether or not recommended */}
-            {review.recommended === true && ( <div className='flex justify-start my-2'>Recommended ✔ Yes</div>)}
+            {review.recommended === true && (<div className='flex justify-start my-2'><b>Recommends this product ✔ </b>Yes</div>)}
             <div className='flex justify-start my-2'>
-                <span>Helpful?</span>
-                <button className='mx-2'>Yes • {review.helpful_yes}</button>
-                <button className='mx-2'>No • {review.helpful_no}</button>
-                <button className='mx-2'>Report</button>
+                <div className='pl-0.5 pr-2.5 pt-0.5'>
+                    <span>Helpful?</span>
+                </div>
+                <button className='cursor-pointer text-start-color bg-helpful-color mr-5px px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>Yes • {review.helpful_yes}</span></button>
+                <button className='cursor-pointer text-start-color bg-helpful-color px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>No • {review.helpful_no}</span></button>
+                <button className='cursor-pointer text-start-color bg-helpful-color px-2.5 py-0.5 rounded-full hover:shadow-inner'><span className='text-sm'>Report</span></button>
             </div>
         </div>
+        {/* <div className='bv-content-item flex flex-col pt-2.5 pb-5'>
+            <div className='bv-content-item-avatar-offset-off'>
+                <div className='bv-content-container'>
+                    <div className='bv-content-header py-2.5'>
+                        <div className='bv-content-header-meta my-0.5'>
+                            <span className='bv-content-rating'>
+                                <span className='bv-rating-stars-container mr-1'></span>
+                            </span>
+                            <div className='bv-content-meta-wrapper'>
+                                <div className='by-content-reference-data py-px'>
+                                    <span className='bv-author py-px'>
+                                        <button className='bv-avatar-popup-target'>
+                                            <span></span>
+                                        </button>
+                                    </span>
+                                    <div className='bv-content-datetime py-px'>
+                                        <span className='bv-content-datetime-dot'>•</span>
+                                        <span className='bv-content-datetime-stamp'></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='bv-content-title-container '></div>
+                    </div>
+                    <div className='bv-content-summary py-2.5'>
+                        <div className='bv-content-summary-body-text mb-4'></div>
+                        <div className='bv-content-data mb-5'></div>
+                    </div>
+                </div>
+                <div className='bv-content-actions-container mb-5px pr-2.5 py-2.5'>
+                    <div className='bv-content-feedback-vote flex'>
+                        <div className='bv-content-feedback-vote-request py-0.5 pr-2.5'>Helpful?</div>
+                    </div>
+                </div>
+                <div className='bv-secondary-content-list'></div>
+                <div className='bv-content-feedback-btn-container mr-5px'>
+                    <button className='btn-yes mr-5px py-0.5 px-2.5 cursor-pointer text-start-color bg-helpful-color rounded-full hover:shadow-inner'></button>
+                    <button className='btn-yes py-0.5 px-2.5 cursor-pointer text-start-color bg-helpful-color rounded-full hover:shadow-inner'></button>
+                </div>
+                <div className='btn-report py-0.5 px-2.5 cursor-pointer text-start-color bg-helpful-color rounded-full hover:shadow-inner'>
+                    <button className=''></button>
+                </div>
+            </div>
+        </div> */}
+        </>
+
+
+        
     )
 }
 

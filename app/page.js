@@ -1,3 +1,5 @@
+'use client'
+import React from 'react';
 import ProductDetails from './components/ProductDetails.jsx';
 import AdvertisementBanner from './components/AdvertisementBanner.jsx';
 import StickySidebar from './components/StickySidebar.jsx';
