@@ -19,14 +19,14 @@ const Quantity = () => {
             <div className="flex mt-4">
               <button
                 onClick={handleDecrement}
-                className="border-solid border-2 border-slate-300 text-slate-500 rounded-full px-3 py-1"
+                className="border-solid border-2 border-slate-300 text-slate-300 rounded-full px-3 py-1"
               >
                 -
               </button>
-              <span className="mx-3 font-bold text-gray-900">{quantity}</span>
+              <span className="mx-3 font-normal text-lg text-gray-900">{quantity}</span>
               <button
                 onClick={handleIncrement}
-                className="border-solid border-2 border-slate-300 text-slate-500 rounded-full px-3 py-1"
+                className="border-solid border-2 border-slate-300 text-slate-300 rounded-full px-3 py-1"
               >
                 +
               </button>

@@ -1,7 +1,7 @@
 'use client'
 import { createContext, useState } from 'react';
 
-// Import AppContext into your component along with useContent to access state
+// Import AppContext into your component along with useContext to access state
 const AppContext = createContext();
 
 /****************Context functions****************/
@@ -42,20 +42,44 @@ export function ReviewProvider({ children }) {
 
 // Context for Product Details Button Bar
 export function ActiveProvider({ children }) {
-    const [isActive, setIsActive] = useState('shipping');
+    const [isActive, setIsActive] = useState('details');
+    const [isCollapsed, setIsCollapsed] = useState(true);
 
     const changeIsActive = (id) => {
         setIsActive(id);
     }
-
+    const changeCollapsed = () => {
+        setIsCollapsed(!isCollapsed);
+    }
     return (
         <AppContext.Provider value={{
             isActive,
-            changeIsActive
+            changeIsActive,
+            isCollapsed,
+            changeCollapsed,
         }}>
             {children}
         </AppContext.Provider>
     );
 }
 
+
+
+export const StickySidebarProvider = ({children}) => {
+    const [favoriteClicked, setFavoriteClicked] = useState(false);
+    const [addCartClicked, setAddCartClicked] = useState(false);
+
+    return (
+        <AppContext.Provider
+          value={{
+            favoriteClicked,
+            addCartClicked,
+            setFavoriteClicked,
+            setAddCartClicked,
+          }}
+        >
+          {children}
+        </AppContext.Provider>
+      );
+    };
 export default AppContext;

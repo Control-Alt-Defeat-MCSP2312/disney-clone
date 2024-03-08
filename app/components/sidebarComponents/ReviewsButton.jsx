@@ -11,10 +11,9 @@ const ReviewsButton = () => {
     <>
       <div
         id="reviews"
-        className="mt-6 mx-auto max-w-2xl px-4 bg-gray text-[#0063e5] mb-6"
+        className="mt-4 mx-auto max-w-2xl px-4 bg-gray text-[#0063e5] mb-6"
       >
-        {/* Reviews content */}
-        <h3 className="sr-only">Reviews</h3>
+
         <div className="flex">
           {/* Stars */}
           <div className="flex">
@@ -27,8 +26,6 @@ const ReviewsButton = () => {
               size={32}
             />
           </div>
-          {/* Average rating and reviews link */}
-          <p className="sr-only">{rating} out of 5 stars</p>
           <a href={reviews.href} className="ml-3 text-md font-light">
             ({reviews.totalCount})
           </a>

@@ -12,7 +12,7 @@ const FavoritesButton = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill={isHeartClicked ? "#0063e5" : "white"}
-          viewBox="0 -7 28 20"
+          viewBox="0 -6 28 20"
           strokeWidth="1"
           stroke="#0063e5"
           className="w-20 h-24 ml-6"
