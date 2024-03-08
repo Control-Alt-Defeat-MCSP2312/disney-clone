@@ -4,6 +4,7 @@ import ProductDetails from './components/ProductDetails.jsx';
 import AdvertisementBanner from './components/AdvertisementBanner.jsx';
 import StickySidebar from './components/StickySidebar.jsx';
 import Header from './components/Header.jsx';
+import PrimaryImage from './components/PrimaryImage.jsx';
 import { ActiveProvider, ReviewProvider } from './context/context.jsx';
 
 export default function Home() {

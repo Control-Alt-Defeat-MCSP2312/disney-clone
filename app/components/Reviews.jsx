@@ -30,7 +30,6 @@ const Reviews = () => {
     }
 
     const handleDropdownToggle = () => {
-
         setDropdownToggle(!dropdownToggle);
     }
 
