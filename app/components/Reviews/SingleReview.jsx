@@ -75,7 +75,7 @@ const SingleReview = ({ review }) => {
             <div className='flex justify-start my-2 font-bold font-AvenirNext'>{review.title}</div>
             <div className='flex justify-start my-2 font-AvenirNext'>{review.review_body}</div>
             {/* Conditionally render based on whether or not recommended */}
-            {review.recommended === true && ( <div className='flex justify-start my-2'><b>Recommends this product ✔</b> Yes</div>)}
+            {review.recommended === true && (<div className='flex justify-start my-2'><b>Recommends this product ✔ </b>Yes</div>)}
             <div className='flex justify-start my-2'>
                 <div className='pl-0.5 pr-2.5 pt-0.5'>
                     <span>Helpful?</span>
@@ -88,17 +88,45 @@ const SingleReview = ({ review }) => {
         {/* <div className='bv-content-item flex flex-col pt-2.5 pb-5'>
             <div className='bv-content-item-avatar-offset-off'>
                 <div className='bv-content-container'>
-                    <div className='bv-content-header py-5'></div>
+                    <div className='bv-content-header py-2.5'>
                         <div className='bv-content-header-meta my-0.5'>
                             <span className='bv-content-rating'>
                                 <span className='bv-rating-stars-container mr-1'></span>
                             </span>
-                            <div className='bv-content-meta-wrapper'
+                            <div className='bv-content-meta-wrapper'>
+                                <div className='by-content-reference-data py-px'>
+                                    <span className='bv-author py-px'>
+                                        <button className='bv-avatar-popup-target'>
+                                            <span></span>
+                                        </button>
+                                    </span>
+                                    <div className='bv-content-datetime py-px'>
+                                        <span className='bv-content-datetime-dot'>•</span>
+                                        <span className='bv-content-datetime-stamp'></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    <div className='bv-content-details-offset-off'></div>
+                        <div className='bv-content-title-container '></div>
+                    </div>
+                    <div className='bv-content-summary py-2.5'>
+                        <div className='bv-content-summary-body-text mb-4'></div>
+                        <div className='bv-content-data mb-5'></div>
+                    </div>
                 </div>
-                <div className='bv-content-actions-container'></div>
+                <div className='bv-content-actions-container mb-5px pr-2.5 py-2.5'>
+                    <div className='bv-content-feedback-vote flex'>
+                        <div className='bv-content-feedback-vote-request py-0.5 pr-2.5'>Helpful?</div>
+                    </div>
+                </div>
                 <div className='bv-secondary-content-list'></div>
+                <div className='bv-content-feedback-btn-container mr-5px'>
+                    <button className='btn-yes mr-5px py-0.5 px-2.5 cursor-pointer text-start-color bg-helpful-color rounded-full hover:shadow-inner'></button>
+                    <button className='btn-yes py-0.5 px-2.5 cursor-pointer text-start-color bg-helpful-color rounded-full hover:shadow-inner'></button>
+                </div>
+                <div className='btn-report py-0.5 px-2.5 cursor-pointer text-start-color bg-helpful-color rounded-full hover:shadow-inner'>
+                    <button className=''></button>
+                </div>
             </div>
         </div> */}
         </>
