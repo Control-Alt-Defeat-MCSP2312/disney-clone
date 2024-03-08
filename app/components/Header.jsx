@@ -5,7 +5,7 @@ const Header = ({ wishlistCount, bagCount }) => {
     // wishlistCount and bagCount are what I plan on using to update the number next to My Wish List / My Bag
     return (
         <div className='flex items-center justify-between p-4 bg-white text-black w-full'>
-            <div className='flex items-center font-avenir'>
+            <div className='flex items-center font-sans'>
                 <a href='https://support.disneystore.com/hc/en-us' className='mx-2'>
                     <></>
                     <div className='mx-1'>Guest Support</div>
@@ -24,7 +24,7 @@ const Header = ({ wishlistCount, bagCount }) => {
             <div className='flex items-center'>
                 <DisneyLogoComponent />
             </div>
-            <div className='flex items-center'>
+            <div className='flex items-center font-sans'>
                 <button>
                     <></>
                     <div className='mx-1'>Sign In</div>
