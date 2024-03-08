@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import SingleReview from './Reviews/SingleReview';
-import { useAppContext } from '../context';
+import AppContext from '../context';
 
 const Reviews = () => {
-    const { state } = useAppContext();
+    const { reviews } = useContext(AppContext);
     const [sortBy, setSortBy] = useState('most-recent')
 
     return (
@@ -18,7 +18,7 @@ const Reviews = () => {
                 <span className='mx-4'>Sort by: Most Recent</span>
             </div>
             {state.reviews.map((review) => {
-                    return <SingleReview review={review} />
+                return <SingleReview review={review} />
             })}
         </div>
     )

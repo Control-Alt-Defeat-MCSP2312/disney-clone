@@ -29,31 +29,31 @@ export default function ProductDetailsText() {
         <ul aria-hidden="false" className="visible w-588px mb-4 list-disc list-inside">
           <li aria-hidden="false" className="visible">Simulated leather backpack</li>
           <li aria-hidden="false" className="visible">Screen art on front features scenes from <em> Star Wars: The Force Awakens</em></li>
-          <li aria-hidden="true" className="invisible">Characters include Poe Dameron, Finn and Kylo Ren, Rey Skywalker and BB-8</li>
-          <li aria-hidden="true" className="invisible"><em>Star Wars: The Force Awakens</em> screen logo on back</li>
-          <li aria-hidden="true" className="invisible">Double zipper main compartment</li>
-          <li aria-hidden="true" className="invisible">Two front zip pockets</li>
-          <li aria-hidden="true" className="invisible">Side slip pockets</li>
-          <li aria-hidden="true" className="invisible">Loungefly logo metal pulls</li>
-          <li aria-hidden="true" className="invisible">Goldtone hardware</li>
-          <li aria-hidden="true" className="invisible">Adjustable straps with padded shoulders</li>
-          <li aria-hidden="true" className="invisible">Top carry loop</li>
-          <li aria-hidden="true" className="invisible">Same screen art featured on lining</li>
-          <li aria-hidden="true" className="invisible">Disney100 Decades label on back</li>
-          <li aria-hidden="true" className="invisible"><em>Star Wars</em> Loungefly logo label plate on front</li>
-          <li aria-hidden="true" className="invisible">Inspired by<em> Star Wars: The Force Awakens</em> (2015)&nbsp;&nbsp;</li>
-          <li aria-hidden="true" className="invisible">Part of the Disney100 Decades: The 2010s Collection</li>
-          <li aria-hidden="true" className="invisible">Part of the Disney100 Celebration Collections</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Characters include Poe Dameron, Finn and Kylo Ren, Rey Skywalker and BB-8</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible"><em>Star Wars: The Force Awakens</em> screen logo on back</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Double zipper main compartment</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Two front zip pockets</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Side slip pockets</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Loungefly logo metal pulls</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Goldtone hardware</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Adjustable straps with padded shoulders</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Top carry loop</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Same screen art featured on lining</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Disney100 Decades label on back</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible"><em>Star Wars</em> Loungefly logo label plate on front</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Inspired by<em> Star Wars: The Force Awakens</em> (2015)&nbsp;&nbsp;</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Part of the Disney100 Decades: The 2010s Collection</li>
+          <li aria-hidden={`${isCollapsed ? "true" : "false"}`} className="invisible">Part of the Disney100 Celebration Collections</li>
         </ul>
-        <p aria-hidden="true" className="separator hidden mb-4 "></p>
-        <label aria-hidden="true" className="prod-description-label hidden font-semibold mb-2 inline-block">The bare necessities</label>
-        <ul aria-hidden="true" className="hidden w-588px mb-4 list-disc list-inside">
+        <p aria-hidden={`${isCollapsed ? "true" : "false"}`} className="separator hidden mb-4 "></p>
+        <label aria-hidden={`${isCollapsed ? "true" : "false"}`} className="prod-description-label hidden font-semibold mb-2 inline-block">The bare necessities</label>
+        <ul aria-hidden={`${isCollapsed ? "true" : "false"}`} className="hidden w-588px mb-4 list-disc list-inside">
           <li aria-hidden="false" className="visible">Polyurethane</li>
           <li aria-hidden="false" className="visible">Approx. 11 2/5'' x 13 3/4'' x 4 1/2''</li>
           <li aria-hidden="false" className="visible">Imported</li>
         </ul>
-        <p aria-hidden="true" className="separator hidden mb-4 "></p>
-        <p aria-hidden="true" className="prod-partnumber hidden mt-30px mb-5 text-prop-details-grey">
+        <p aria-hidden={`${isCollapsed ? "true" : "false"}`} className="separator hidden mb-4 "></p>
+        <p aria-hidden={`${isCollapsed ? "true" : "false"}`} className="prod-partnumber hidden mt-30px mb-5 text-prop-details-grey">
           <span aria-hidden="false" className="prod-partnumber__label visible mr-10px ">Item No.</span>
           <span aria-hidden="false" className="prod-partnumber__text visible">442031181363</span>
         </p>
