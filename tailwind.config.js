@@ -37,7 +37,9 @@ module.exports = {
       padding: {
         '5px': '5px',
         '10px': '10px',
+        '15px': '15px',
         '25px': '25px',
+        '30px': '30px',
       },
       boxShadow: {
         'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'
@@ -45,6 +47,7 @@ module.exports = {
       fontSize: {
         'star': '.9375rem',
         xs: '.625rem',
+        s: '.75rem',
         sm: '0.8rem',
         base: '1rem',
         xl: '1.25rem',
@@ -75,18 +78,26 @@ module.exports = {
         '30px': '30px',
         '113px': '113px',
         '300px': '300px',
+        '346px': '346px',
+        '384px': '384px',
+        '424px': '424px',
         '588px': '588px',
       },
       letterSpacing: {
         wider: '.08em',
         '3px': '3px',
+        '.048px': '.048px',
       },
       backgroundImage: {
+        'sticky-gradient': 'linear-gradient(144.33deg, #f8f8f8 28.01%, #fff 98.8%)',
         'custom-gradient': 'linear-gradient(90deg, #0075e3 var(--percent), #cbe3f9 var(--percent))',
         'read-more-gradient': 'linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff)',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      zIndex: {
+        '899': '899',
       },
     },
   },
