@@ -1,7 +1,10 @@
-import React, { useRef } from "react";
+"use client";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CarouselDetail from "./CarouselDetail";
+
+//npm install react-multi-carousel --save
 
 export default function MoreToExplore() {
   const productData = [
