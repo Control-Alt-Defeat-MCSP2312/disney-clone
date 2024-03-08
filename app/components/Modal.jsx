@@ -1,3 +1,4 @@
+"use client";
 export default function Modal({ setShowModal }) {
   function handleCloseModal() {
     console.log("closing modal");

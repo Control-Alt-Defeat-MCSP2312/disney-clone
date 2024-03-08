@@ -7,6 +7,7 @@ import Header from './components/Header.jsx';
 import PrimaryImage from './components/PrimaryImage.jsx';
 import Footer from './components/Footer.jsx';
 import Shipping from './components/Shipping.jsx';
+import MoreToExplore from './components/MoreToExplore.jsx
 import { ActiveProvider, ReviewProvider } from './context/context.jsx';
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         </div>
         <Shipping />
       </div>
+      <MoreToExplore />
       <AdvertisementBanner />
       <Footer />
     </div>
