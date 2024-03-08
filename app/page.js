@@ -32,11 +32,5 @@ export default function Home() {
       <AdvertisementBanner />
       <Footer />
     </div>
-    <StickySidebar />
-  </div>
-  <AdvertisementBanner />
-  <Footer />
-</div>
-
   );
 }
