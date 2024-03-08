@@ -9,15 +9,13 @@ const Reviews = () => {
     const [displayedCount, setDisplayedCount] = useState(8);
     const [dropdownToggle, setDropdownToggle] = useState(false);
 
-
     useEffect(() => {
         fetchReviews();
     }, [])
 
     useEffect(() => {
-        //Set displayed reviews based on startIndex and endIndex
         setDisplayedReviews(reviews.reviews.slice(0, displayedCount));
-    }, [reviews.reviews, displayedCount])
+    }, [displayedCount])
 
     // Set total item reviews and how many reviews to display initially
     const totalReviews = reviews.reviews.length; // 10
