@@ -42,16 +42,21 @@ export function ReviewProvider({ children }) {
 
 // Context for Product Details Button Bar
 export function ActiveProvider({ children }) {
-    const [isActive, setIsActive] = useState('shipping');
+    const [isActive, setIsActive] = useState('details');
+    const [isCollapsed, setIsCollapsed] = useState(true);
 
     const changeIsActive = (id) => {
         setIsActive(id);
     }
-
+    const changeCollapsed = () => {
+        setIsCollapsed(!isCollapsed);
+    }
     return (
         <AppContext.Provider value={{
             isActive,
-            changeIsActive
+            changeIsActive,
+            isCollapsed,
+            changeCollapsed,
         }}>
             {children}
         </AppContext.Provider>
