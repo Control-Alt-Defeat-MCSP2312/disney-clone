@@ -9,6 +9,8 @@ import Footer from "./components/Footer.jsx";
 import Shipping from "./components/Shipping.jsx";
 import MoreToExplore from "./components/CarouselComponents/MoreToExplore.jsx";
 import YMAL from "./components/CarouselComponents/YMAL.jsx";
+import ShopMore from "./components/ShopMore.jsx";
+
 import { ActiveProvider, ReviewProvider } from "./context/context.jsx";
 
 export default function Home() {
@@ -33,6 +35,7 @@ export default function Home() {
         <Shipping />
       </div>
       <MoreToExplore />
+      <ShopMore />
       <AdvertisementBanner />
       <Footer />
     </div>
