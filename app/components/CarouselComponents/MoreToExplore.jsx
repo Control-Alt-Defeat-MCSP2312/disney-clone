@@ -128,7 +128,9 @@ export default function MoreToExplore() {
     }
   }
   // this is where the .map was
-  const product = productData;
+  const product = productData
+    .slice(0, 6)
+    .map((item) => <CarouselDetail product={item} />);
 
   return (
     <div className="flex flex-col">
@@ -178,16 +180,9 @@ export default function MoreToExplore() {
         arrows={false}
         draggable={true}
         slidesToSlide={1}
-        className="carousel-item"
         ref={(ref) => setCarouselRef(ref)}
-        customTransition="all .5"
-        containerClass="custom-carousel-container"
       >
-        {product.map((item) => (
-          <div className="mr-0" key={item.id}>
-            <CarouselDetail key={item.id} product={item} />
-          </div>
-        ))}
+        {product}
       </Carousel>
     </div>
   );

@@ -1,14 +1,15 @@
-'use client'
-import React from 'react';
-import ProductDetails from './components/ProductDetails.jsx';
-import AdvertisementBanner from './components/AdvertisementBanner.jsx';
-import StickySidebar from './components/StickySidebar.jsx';
-import Header from './components/Header.jsx';
-import PrimaryImage from './components/PrimaryImage.jsx';
-import Footer from './components/Footer.jsx';
-import Shipping from './components/Shipping.jsx';
-import MoreToExplore from './components/MoreToExplore.jsx';
-import { ActiveProvider, ReviewProvider } from './context/context.jsx';
+"use client";
+import React from "react";
+import ProductDetails from "./components/ProductDetails.jsx";
+import AdvertisementBanner from "./components/AdvertisementBanner.jsx";
+import StickySidebar from "./components/StickySidebar.jsx";
+import Header from "./components/Header.jsx";
+import PrimaryImage from "./components/PrimaryImage.jsx";
+import Footer from "./components/Footer.jsx";
+import Shipping from "./components/Shipping.jsx";
+import MoreToExplore from "./components/CarouselComponents/MoreToExplore.jsx";
+import YMAL from "./components/CarouselComponents/YMAL.jsx";
+import { ActiveProvider, ReviewProvider } from "./context/context.jsx";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
                 <ProductDetails />
               </ActiveProvider>
             </ReviewProvider>
+            <YMAL />
           </div>
           <div className="sticky-side-rail-content block w-424px bg-sticky-gradient z-899 absolute top-0 bottom-0 right-0 m-0 shadow-none">
             <StickySidebar />
