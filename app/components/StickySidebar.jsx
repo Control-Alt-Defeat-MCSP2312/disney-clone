@@ -1,7 +1,6 @@
-import { StickySidebarProvider } from "../context/context";
-import AddToBagbutton from "./sidebarComponents/AddToBagbutton";
+'use client'
 import FavoritesButton from "./sidebarComponents/FavoritesButton";
-import Quantity from "./sidebarComponents/Quantity";
+import QuantityAndAddToBag from "./sidebarComponents/QuantityAndAddToBag";
 import ReviewsButton from "./sidebarComponents/ReviewsButton";
 
 const product = {
@@ -16,10 +15,9 @@ const product = {
     { id: 4, name: "Backpacks", href: "#" },
   ],
 };
-
 export default function StickySidebar() {
   return (
-    <StickySidebarProvider>
+
 <div className="bg-stone-50 h-full col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 place-content-start">
   <div className="sticky top-0 overflow-y-auto ">
     <div className="flex-grow max-w-full relative p-10 font-sans">
@@ -57,12 +55,12 @@ export default function StickySidebar() {
         </div>
 
         {/* Quantity Section */}
-        <Quantity />
+        <QuantityAndAddToBag />
 
         {/* Price and Button content */}
         <div className="mx-auto max-w-2xl px-4">
           <span className="flex">
-            <AddToBagbutton />
+          
             <FavoritesButton />
           </span>
         </div>
@@ -70,7 +68,8 @@ export default function StickySidebar() {
       </div>
     </div>
 
-    </StickySidebarProvider>
+
     
   );
 }
+

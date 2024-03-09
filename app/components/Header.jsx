@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DisneyLogoComponent from '../../public/disney-store-logo.svg'
+import AppContext from '../context/context';
 
-const Header = ({ wishlistCount, bagCount }) => {
+const Header = () => {
+    const { wishlistCount, bagCount } = useContext(AppContext)
     // wishlistCount and bagCount are what I plan on using to update the number next to My Wish List / My Bag
     return (
         <div className='flex items-center justify-between p-4 bg-white text-black w-full'>
