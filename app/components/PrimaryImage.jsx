@@ -36,7 +36,7 @@ const PrimaryImage = () => {
     <>
       <div className="grid grid-cols-2 grid-rows-2 gap-0 pt-5 px-5">
         {images.images.map((image) => (
-          <div key={image.id} className='m-0 p-0'>
+          <div key={image.id} className='m-0 p-0 cursor-zoom-in'>
             <Image src={image.src} alt={image.alt} width={550} height={550} style={{ objectFit: "contain" }} />
           </div>
         ))}

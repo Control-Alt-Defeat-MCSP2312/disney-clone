@@ -17,7 +17,7 @@ const FavoritesButton = () => {
           viewBox="0 -6 28 20"
           strokeWidth="1"
           stroke="#0063e5"
-          className="w-20 h-24 ml-6"
+          className="w-20 h-24 ml-6 sm:w-24 sm:h-28 md:w-28 md:h-32"
         >
           <path
             strokeLinecap="round"

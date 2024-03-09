@@ -29,7 +29,7 @@ const QuantityAndAddToBag = () => {
         <button
           onClick={handleButtonClick}
           type="submit"
-          className="mt-8 mb-0 text-white rounded-full py-5 px-12 text-xl font-bold bg-gradient-to-r from-[#00aaf2] from-98.4 to-[#0063e5] to-6.4% hover:from-sign-up-hover hover:to-sign-up-hover"
+          className="mt-8 mb-0 text-white rounded-full py-5 px-12 text-xl font-bold bg-gradient-to-r from-[#00aaf2] from-98.4 to-[#0063e5] to-6.4% hover:from-sign-up-hover hover:to-sign-up-hover sm:py-6 sm:px-14 md:py-8 md:px-16 lg:py-10 lg:px-20 xl:py-12 xl:px-24"
         >
           ADD TO BAG
         </button>
