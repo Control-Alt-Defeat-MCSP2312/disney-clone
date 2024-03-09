@@ -26,7 +26,7 @@ export default function ProductDetailsText() {
         <p aria-hidden="false" className="separator visible mb-4 "></p>
         <label aria-hidden="false" className="prod-description-label visible font-500 mb-2 inline-block">Magic in the details</label>
         <p aria-hidden="false" className="prod-content visible mb-0 "></p>
-        <ul aria-hidden="false" className="visible w-588px pl-10 mb-4 list-disc list-inside">
+        <ul aria-hidden="false" className="visible w-588px pl-6 mb-4 list-disc list-inside">
           <li aria-hidden="false" className="visible">Simulated leather backpack</li>
           <li aria-hidden="false" className="visible">Screen art on front features scenes from <em> Star Wars: The Force Awakens</em></li>
           <li aria-hidden="false" className="visible">Characters include Poe Dameron, Finn and Kylo Ren, Rey Skywalker and BB-8</li>
@@ -47,7 +47,7 @@ export default function ProductDetailsText() {
         </ul>
         <p aria-hidden={`${isCollapsed ? "true" : "false"}`} className={`separator mb-4 ${isCollapsed ? "invisible" : "visible"}`}></p>
         <label aria-hidden={`${isCollapsed ? "true" : "false"}`} className={`prod-description-label font-500 mb-2 inline-block ${isCollapsed ? "invisible" : "visible"}`}>The bare necessities</label>
-        <ul aria-hidden={`${isCollapsed ? "true" : "false"}`} className={`w-588px pl-41px mb-4 list-disc list-inside ${isCollapsed ? "invisible" : "visible"}`}>
+        <ul aria-hidden={`${isCollapsed ? "true" : "false"}`} className={`w-588px pl-6 mb-4 list-disc list-inside ${isCollapsed ? "invisible" : "visible"}`}>
           <li aria-hidden="false" className="visible">Polyurethane</li>
           <li aria-hidden="false" className="visible">Approx. 11 2/5'' x 13 3/4'' x 4 1/2''</li>
           <li aria-hidden="false" className="visible">Imported</li>
@@ -58,7 +58,7 @@ export default function ProductDetailsText() {
           <span aria-hidden="false" className="prod-partnumber__text visible">442031181363</span>
         </p>
       </div>
-      <div className={`readmore-link absolute flex w-full items-end underline ${isCollapsed ? "bg-read-more-gradient h-113px bottom-neg-24px" : "h-auto bottom-neg-24px"}`}>
+      <div className={`readmore-link absolute flex w-full items-end underline ${isCollapsed ? "bg-read-more-gradient h-200px bottom-4" : "h-auto bottom-neg-24px"}`}>
         <button type="button" onClick={handleCollapse} className="read-more-btn relative text-lg leading-6 font-extralight text-deep-grey text-left cursor-pointer overflow-visible rounded-none">
           <span className={`read-more block h-full ${isCollapsed ? "visible" : "hidden"}`}>Read More</span>
           <span className={`read-less h-full ${isCollapsed ? "hidden" : "visible"}`}>Read Less</span>
