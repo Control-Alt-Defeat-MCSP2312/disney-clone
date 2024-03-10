@@ -1,11 +1,10 @@
-// MainContainer.jsx
 import React from 'react';
 import Header from './Header';
 import Navbar from './Navbar';
 
 const MainContainer = () => {
   return (
-    <div flex flex-col w-full> 
+    <div className="flex flex-col w-full">
         <Header />
         <Navbar />
     </div>

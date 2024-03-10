@@ -34,9 +34,9 @@ function Navbar() {
   ];
 
   return (
-    <nav className="border"> {/* Wraps entire nav bar */}
-      <ul className="flex justify-between items-center font-avenir font-base font-normal w-full"> {/* Container for nav bar content */}
-        <div className="flex justify-center flex-grow"> {/* wraps list items  */}
+    <nav className="border">
+      <ul className="flex justify-between items-center font-avenir font-base font-normal w-full">
+        <div className="flex justify-center flex-grow">
           {menu.map((category) => (
             <li key={category.name}
               onMouseEnter={() => setIsOpen(category.name)}
@@ -47,6 +47,33 @@ function Navbar() {
                   {category.name}
                 </button>
               </a>
+              {isOpen === category.name && (
+                <div className="absolute bg-white border-t border-gray-200 w-full left-0 right-0 z-10">
+                  <div className="flex">
+                    {/* Image container */}
+                    <div className="flex-none w-1/3 max-w-xs pr-7">
+                      {/* Make sure your image filenames match this logic */}
+                      <img src={`/36418_nt_20240205_2x.webp`} alt={category.name} />
+                    </div>
+                    {/* Subcategories Container */}
+                    <div className="flex justify-between w-2/3">
+                      {category.subcategories.map((subcategory, index) => (
+                        <div key={index} className="flex flex-col">
+                          <h3 className="font-bold text-lg mb-2">{subcategory.name}</h3>
+                          <ul className="space-y-2">
+                            {subcategory.items.map((item, idx) => (
+                              <li key={idx} className="hover:text-blue-500">
+                                {/* Make sure to replace this with your routing logic if needed */}
+                                <a href={`/categories/${item.toLowerCase()}`} className="block">{item}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </li>
           ))}
         </div>
