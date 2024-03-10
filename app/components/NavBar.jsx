@@ -34,7 +34,8 @@ function Navbar() {
   ];
 
   return (
-    <nav className="border p-5"> {/* Wraps entire nav bar */}
+    // Parent container for the entire nav bar
+    <nav className="border p-5 relative"> {/* Wraps entire nav bar */}
       <ul className="flex justify-between items-center font-avenir font-base font-normal w-full"> {/* Container for nav bar content */}
         <div className="flex justify-center flex-grow"> {/* wraps list items  */}
           {menu.map((category) => (
@@ -42,7 +43,7 @@ function Navbar() {
               onMouseEnter={() => setIsOpen(category.name)}
               onMouseLeave={() => setIsOpen(false)}
             >
-              <a href="#" className="relative text-sm w-fit block after:block after:content-[''] after:absolute after:h-[5px] after:bg-blue-500 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-500 after:origin-center">
+              <a href="#" className={`relative text-sm w-fit block after:block after:content-[''] after:absolute after:h-[5px] after:bg-blue-500 after:w-full ${isOpen === category.name ? 'after:scale-x-100 after:transition-transform duration-1000' : 'after:scale-x-0  after:transition-none'} after:origin-center`}>
                 <button className="uppercase font-semibold text-sm hover:text-blue-500 leading-6 font-avenir">
                   {category.name}
                 </button>
@@ -55,10 +56,18 @@ function Navbar() {
                   paddingLeft: '30px',
                   paddingRight: '30px',
                   position: 'absolute',
-                  transition: 'max-height 1.2s',
+                  top: '100%', // positions the dropdown right below the parent element
+                  left: 0, // aligns the dropdown to the left edge of the page
+                  width: '100%', // makes the dropdown span the width of the parent element
+                  transition: 'max-height 1.2s, border 0.3s',
                   zIndex: 1200,
                   lineHeight: '24px',
                   display: 'flex',
+                  borderLeft: 'none',
+                  borderRight: 'none',
+                  borderBottom: '1px solid white',
+                  backgroundColor: 'white',
+                  boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)' 
                 }}>
                   {category.subcategories.map((sub, index) => (
                     <div key={index} className="flex flex-col px-4 py-2" style={{ /* Add individual styles here */ }}>
