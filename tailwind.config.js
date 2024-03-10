@@ -7,10 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      spacing: {
-        '95': '2400px', // Custom width value
-        '39': '156px',  // Custom height value
-      },
       colors: {
         'visa-blue': '#445fae',
         'zinc-grey': '#222',
@@ -18,8 +14,7 @@ module.exports = {
         'end-color': '#cbe3f9',
       },
       zIndex: {
-        '900': '900',
-        '2500': '2500',  // Assuming you want to use 2500 as a custom z-index
+        '900': '900', 
       },
       margin: {
         '10px': '10px',
@@ -44,7 +39,7 @@ module.exports = {
         custom: 'rgba(0, 0, 0, 0.1)',
       }),
       borderWidth: {
-        '1.25': '1.25px', // Add custom border-width here
+        '1.25': '1.25px', 
       },
       lineHeight: {
         'star': '1.3125rem',
