@@ -54,6 +54,7 @@ module.exports = {
         '60px': '60px',
         '63px': '63px',
         '81px': '81px',
+        '150px': '150px',
       },
       boxShadow: {
         'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'

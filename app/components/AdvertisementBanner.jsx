@@ -7,7 +7,7 @@ const AdvertisementBanner = () => {
         <>
             <div className='bg-visa-blue'>
                 <a className='flex justify-center' href='https://www.disneystore.com/disney-visa-card.html?CELL=63NG06'>
-                    <div className='font-sans justify-center items-center bg-visa-blue text-container flex flex-col pr-81px my-3.5 text-white'>
+                    <div className='font-sans justify-start items-center bg-visa-blue text-container flex flex-col pr-81px my-3.5 text-white'>
                         <div className='headline flex mb-5px text-3xl'>
                             <span className='currency pt-8 -mr-2'>$</span>
                             <span className='mr-3 font text-hundred'>100</span>
