@@ -6,8 +6,9 @@ import ProductDetailsButtons from './ProductDetailsButtons.jsx';
 import ShippingText from './ShippingText.jsx';
 // import Reviews from './Reviews.jsx';
 
+// Component that displays the Product Details Button bar and conditionally renders relevant information.
 export default function ProductDetails() {
-  const { isActive } = useContext(AppContext)
+  const { isActive } = useContext(AppContext) // Active change to render text based on what button is pressed.
 
   return (
     <div className="product__details_background border-b-0 p-0 border-t-0 mt-0 w-full ">

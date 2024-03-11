@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import AppContext from '../context/context.jsx';
 
+
 export default function ProductDetailsText() {
   const { isActive, isCollapsed, changeCollapsed } = useContext(AppContext)
 

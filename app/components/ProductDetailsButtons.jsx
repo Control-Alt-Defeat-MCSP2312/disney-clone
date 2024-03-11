@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import AppContext from '../context/context';
 
+// Component for all 3 buttons in the button bar.
 export default function ProductDetailsButtons() {
 	const { isActive, changeIsActive } = useContext(AppContext);
 
