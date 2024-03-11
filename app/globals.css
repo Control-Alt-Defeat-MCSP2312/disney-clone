@@ -8,3 +8,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.copyright-container ul li:first-child:after {
+    content: "|";
+}
+
+.copyright-container ul li:after {
+    content: "|";
+    padding: 0 6px;
+}

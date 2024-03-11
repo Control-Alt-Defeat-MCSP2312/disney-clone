@@ -33,7 +33,6 @@ export default function Home() {
         <Shipping />
       </div>
       <MoreToExplore />
-      <AdvertisementBanner />
       <Footer />
     </div>
   );
