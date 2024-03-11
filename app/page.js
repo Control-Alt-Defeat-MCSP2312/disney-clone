@@ -7,8 +7,12 @@ import Header from './components/Header.jsx';
 import PrimaryImage from './components/PrimaryImage.jsx';
 import Footer from './components/Footer.jsx';
 import Shipping from './components/Shipping.jsx';
-import MoreToExplore from './components/MoreToExplore.jsx'
+
+import MoreToExplore from "./components/CarouselComponents/MoreToExplore.jsx";
+import YMAL from "./components/CarouselComponents/YMAL.jsx";
+import ShopMore from "./components/ShopMore.jsx";
 import { ActiveProvider, ReviewProvider, StickySidebarProvider } from './context/context.jsx';
+
 
 export default function Home() {
   return (
@@ -24,6 +28,7 @@ export default function Home() {
                 <ProductDetails />
               </ActiveProvider>
             </ReviewProvider>
+            <YMAL />
           </div>
           <div className="sticky-side-rail-content block w-424px bg-sticky-gradient z-899 absolute top-0 bottom-0 right-0 m-0 shadow-none">
             <StickySidebar />
@@ -32,6 +37,7 @@ export default function Home() {
         <Shipping />
       </div>
       <MoreToExplore />
+      <ShopMore />
       <AdvertisementBanner />
       <Footer />
        </StickySidebarProvider>
