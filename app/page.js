@@ -7,8 +7,10 @@ import Header from './components/Header.jsx';
 import PrimaryImage from './components/PrimaryImage.jsx';
 import Footer from './components/Footer.jsx';
 import Shipping from './components/Shipping.jsx';
-import MoreToExplore from './components/MoreToExplore.jsx'
+import MoreToExplore from "./components/CarouselComponents/MoreToExplore.jsx";
+import YMAL from "./components/CarouselComponents/YMAL.jsx";
 import { ActiveProvider, ReviewProvider } from './context/context.jsx';
+
 
 export default function Home() {
   return (
@@ -28,6 +30,7 @@ export default function Home() {
                 <ProductDetails />
               </ActiveProvider>
             </ReviewProvider>
+            <YMAL />
           </div>
         </div>
         <Shipping />
