@@ -1,6 +1,6 @@
 # 🎮 Disney Item Detail Page Clone
 
-This project is a full-stack application that aims to create a web-based clone of Steam. It uses an external PostgreSQL database for the backend and React/Next.js for the frontend.
+This project is a full-stack application that aims to be a 1-to-1 clone of a Disney website's item details [page](https://www.disneystore.com/star-wars-the-force-awakens-loungefly-backpack-disney100-442031181363.html), focusing on design accuracy and functionality replication. It uses an external PostgreSQL database for the backend and React/Next.js for the frontend.
 
 ## 🚀 Getting Started
 
@@ -23,8 +23,6 @@ You need to have Node.js and npm installed on your machine. If you don't have th
 #### GET
 * /api/item - Get a list of all items
 * /api/reviews - Get a list of all reviews
-
-## <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/render-colored.svg" width="36" height="36" alt="Render" /> Live Demo
 
 ## 🛠️ Built With
 
