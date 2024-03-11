@@ -130,7 +130,7 @@ export default function YMAL() {
   // this is where the .map was
   const product = productData
     .slice(7, 13)
-    .map((item) => <CarouselDetail product={item} />);
+    .map((item, index) => <CarouselDetail key={index} product={item} />);
 
   return (
     <div className="flex flex-col mt-9">
@@ -142,15 +142,15 @@ export default function YMAL() {
           <button onClick={moveLeft}>
             {
               <svg
-                class="h-12 w-12 text-slate-100 hover:text-blue-500 ease-in-out"
+                className="h-12 w-12 text-slate-100 hover:text-blue-500 ease-in-out"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                stroke-width="2"
+                strokeWidth="2"
                 stroke="currentColor"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 {" "}
                 <path stroke="none" d="M0 0h24v24H0z" />{" "}
@@ -161,13 +161,13 @@ export default function YMAL() {
           <button onClick={moveRight}>
             {" "}
             <svg
-              class="h-12 w-12 text-slate-100 hover:text-blue-500 ease-in-out"
+              className="h-12 w-12 text-slate-100 hover:text-blue-500 ease-in-out"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               {" "}
               <polyline points="9 18 15 12 9 6" />
