@@ -35,80 +35,69 @@ function Navbar() {
 
   return (
     // Parent container for the entire nav bar
-    <nav className="border p-5 relative"> {/* Wraps entire nav bar */}
-      <ul className="flex justify-between items-center font-avenir font-base font-normal w-full"> {/* Container for nav bar content */}
-        <div className="flex justify-center flex-grow"> {/* wraps list items  */}
-          {menu.map((category) => (
-            <li key={category.name}
-              onMouseEnter={() => setIsOpen(category.name)}
-              onMouseLeave={() => setIsOpen(false)}
+    <nav className="border p-5 mt-18">
+      <ul className="flex justify-between items-center font-avenir font-base font-normal w-full">
+        {/* Map over each category in the menu array */}
+        {menu.map((category) => (
+          <li
+            key={category.name}
+            onMouseEnter={() => setIsOpen(category.name)}
+            onMouseLeave={() => setIsOpen(false)}
+            className="relative"
+          >
+            {/* Animated blue bar and category name */}
+            <a
+              href="#"
+              className={`a-tag text-sm block after:block after:content-[''] after:absolute after:h-[5px] after:bg-blue-500 after:w-full ${isOpen === category.name
+                ? 'after:scale-x-100 after:transition-transform duration-1000'
+                : 'after:scale-x-0  after:transition-none'
+                } after:origin-center`}
             >
-              <a href="#" className={`relative text-sm w-fit block after:block after:content-[''] after:absolute after:h-[5px] after:bg-blue-500 after:w-full ${isOpen === category.name ? 'after:scale-x-100 after:transition-transform duration-1000' : 'after:scale-x-0  after:transition-none'} after:origin-center`}>
-                <button className="uppercase font-semibold text-sm hover:text-blue-500 leading-6 font-avenir">
-                  {category.name}
-                </button>
-              </a>
-              {isOpen === category.name && (
-                <div style={{
-                  maxHeight: '100vh',
-                  paddingTop: '40px',
-                  paddingBottom: '40px',
-                  paddingLeft: '30px',
-                  paddingRight: '30px',
-                  position: 'absolute',
-                  top: '100%', // positions the dropdown right below the parent element
-                  left: 0, // aligns the dropdown to the left edge of the page
-                  width: '100%', // makes the dropdown span the width of the parent element
-                  transition: 'max-height 1.2s, border 0.3s',
-                  zIndex: 1200,
-                  lineHeight: '24px',
-                  display: 'flex',
-                  borderLeft: 'none',
-                  borderRight: 'none',
-                  borderBottom: '1px solid white',
-                  backgroundColor: 'white',
-                  boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)' 
-                }}>
-                  {category.subcategories.map((sub, index) => (
-                    <div key={index} className="flex flex-col px-4 py-2" style={{ /* Add individual styles here */ }}>
-                      <h3 className="font-bold text-lg mb-2">{sub.name}</h3>
-                      <hr className="mb-2" />
-                      <ul className="text-base list-none">
-                        {sub.items.map((item, idx) => (
-                          <li key={idx} className="py-1 hover:text-blue-500">
-                            {item !== 'null' ? item : ''}
-                          </li>
-                        ))}
-                      </ul>
-                      {/* Render additional categories for the last subcategory (Disney Park in this case) */}
-                      {index === category.subcategories.length - 1 && category.subcategories[index].additional && (
-                        <div className="mt-4">
-                          {category.subcategories[index].additional.map((additionalSub, additionalIdx) => (
-                            <div key={additionalIdx}>
-                              <h3 className="font-bold text-lg mb-2">{additionalSub.name}</h3>
-                              <ul className="text-base list-none">
-                                {additionalSub.items.map((additionalItem, itemIdx) => (
-                                  <li key={itemIdx} className="py-1 hover:bg-gray-100">
-                                    {additionalItem !== 'null' ? additionalItem : ''}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
+              <button className="uppercase font-semibold text-sm hover:text-blue-500 leading-6 font-avenir">
+                {category.name}
+              </button>
+            </a>
+            {/* Render the dropdown if the category is active */}
+            {isOpen === category.name && (
+              <div className="flex absolute left-0 mt-2 w-full pt-10 pb-10 pl-8 pr-8 border-b border-white">
+                <div className="border-none box-border text-gray-900 cursor-pointer block w-72 h-48 pr-7 pointer-events-auto text-left text-base font-normal leading-6 list-none max-w-72 antialiased">
+                  <img src="/36418_nt_20240205_2x.webp" alt="Your image description" className="w-full h-full object-cover" />
                 </div>
-              )}
-            </li>
-          ))}
-        </div>
+                {category.subcategories.map((subcategory) => (
+                  <div key={subcategory.name} className="flex flex-col px-4 py-2 ">
+                    <h3 className="font-semibold mb-2 text-lg">{subcategory.name}</h3>
+                    <ul className="text-base list-none">
+                      {subcategory.items.map((item) => (
+                        <li key={item} className="py-1 hover:text-blue-500">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {/* Render additional items if they exist */}
+                    {subcategory.additional && subcategory.additional.map((additionalItem) => (
+                      <div key={additionalItem.name}>
+                        <h3 className="font-semibold mb-2">{additionalItem.name}</h3>
+                        <ul className="text-base list-none">
+                          {additionalItem.items.map((item) => (
+                            <li key={item} className="py-1 hover:text-blue-500">
+                              {item !== 'null' ? item : ''}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
-  );
+  )
 }
 
 export default Navbar;
 
 
+// 36418_nt_20240205_2x.webp
