@@ -11,17 +11,17 @@ const Footer = () => {
     return (
         <>
             <AdvertisementBanner />
-            <footer className='flex justify-center items-center bg-white font-sans'>
-                <div className='main-container pt-45px ml-165.5px mr-165.5px text-base font-sans'>
+            <footer className='flex justify-center items-center bg-white font-AvenirNext'>
+                <div className='main-container pt-45px ml-165.5px mr-165.5px text-base font-AvenirNext'>
                     <div className='footer-top flex flex-row'>
                         <div className='top-left basis-1/3'>
-                            <div className='newsletter text-xs text-footer-color'>Sign up for our emails to get the inside scoop on special offers and new products.</div>
+                            <div className='newsletter text-sm text-footer-grey'>Sign up for our emails to get the inside scoop on special offers and new products.</div>
                             <div className='flex newsletter-signup mt-2.5'>
-                                <button className='items-center pr-20px pl-20px pb-10px pt-10px mr-0.9375em rounded-3px text-xs bg-start-color hover:bg-sign-up-hover text-white'>Sign up</button>
+                                <button className='items-center pr-20px pl-20px pb-10px pt-10px mr-0.9375em font-semibold rounded-3px text-sm bg-start-color hover:bg-sign-up-hover text-white'>Sign up</button>
                                 <div className='privacy-policy'>
-                                    <span className='stay-in-touch text-stay-in-touch font-semibold text-xs'>Stay in Touch</span>
+                                    <span className='stay-in-touch text-stay-in-touch font-semibold text-sm'>Stay in Touch</span>
                                     <br></br>
-                                    <a className='text-xs text-prop-details-grey' href='https://privacy.thewaltdisneycompany.com/en/'><u>Privacy Policy</u></a>
+                                    <a className='text-sm text-prop-details-grey' href='https://privacy.thewaltdisneycompany.com/en/'><u>Privacy Policy</u></a>
                                 </div>
                             </div>
                             <div className='social-container'>
@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
                         <div className='flex basis-2/3 top-right pl-60px'>
                             <div className='category-container'>
-                                <ul className='mr-5 text-sm text-footer-color'>
+                                <ul className='mr-5 text-sm text-black'>
                                     <li><a href='https://www.disneystore.com/characters.html' className='hover:text-footer-blue'>Characters</a></li>
                                     <li className='mt-0.5625rem'><a href='https://www.disneystore.com/disney-parks/' className='hover:text-footer-blue'>Parks</a></li>
                                     <li className='mt-0.5625rem'><a href='https://www.disneystore.com/franchises/disney/' className='hover:text-footer-blue'>Magic World</a></li>
@@ -66,7 +66,7 @@ const Footer = () => {
                                     <li className='mt-0.5625rem'><a href='https://www.disneystore.com/franchises/national-geographic/' className='hover:text-footer-blue'>National Geographic</a></li>
                                 </ul>
                             </div>
-                            <div className='links-container pl-63px border-l border-footer-color'>
+                            <div className='relative links-container pl-63px before:left-neg-1px before:content-[""] before:bg-prop-details-grey before:absolute before:top-5% before:w-1px before:h-90%'>
                                 <div className='links-asset flex'>
                                     <ul className='mr-5 text-sm text-footer-color'>
                                         <li><a href='https://support.disneystore.com/hc/en-us' className='hover:text-footer-blue'>Guest Support</a></li>
@@ -94,18 +94,18 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='copyright-container flex py-12 inline'>
-                        <ul className='flex flex-wrap space-x text-copyright text-xs'>
-                            <li className='hover:text-footer-blue'>&copy; Magic World, All Rights Reserved</li>
-                            <li><a href='https://disneytermsofuse.com/' className='hover:text-footer-blue'>Terms of Use</a></li>
-                            <li><a href='https://support.disneystore.com/hc/en-us/articles/7347170254867-Legal-Notices' className='hover:text-footer-blue'>Additional Content Information</a></li>
-                            <li><a href='https://privacy.thewaltdisneycompany.com/en/' className='hover:text-footer-blue'>Privacy Policy</a></li>
-                            <li><a href='https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-us-state-privacy-rights/' className='hover:text-footer-blue'>Your US State Privacy Rights</a></li>
-                            <li><a className='hover:text-footer-blue'>Do Not Sell or Share My Personal Information</a></li>
-                            <li><a href='https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/' className='hover:text-footer-blue'>Children's Online Privacy Policy</a></li>
-                            <li><a href='https://thewaltdisneycompany.com/?ppLink=pp_ds' className='hover:text-footer-blue'>About Magic World</a></li>
+                    <div className='copyright-container flex py-12'>
+                        <ul className='flex flex-wrap space-x text-copyright text-sm'>
+                            <li className='hover:text-footer-blue after:content-["|"] after:px-1.5'>&copy; Magic World, All Rights Reserved</li>
+                            <li><a href='https://disneytermsofuse.com/' className='hover:text-footer-blue after:content-["|"] after:px-1.5' >Terms of Use</a></li>
+                            <li><a href='https://support.disneystore.com/hc/en-us/articles/7347170254867-Legal-Notices' className='hover:text-footer-blue after:content-["|"] after:px-1.5'>Additional Content Information</a></li>
+                            <li><a href='https://privacy.thewaltdisneycompany.com/en/' className='hover:text-footer-blue after:content-["|"] after:px-1.5'>Privacy Policy</a></li>
+                            <li><a href='https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-us-state-privacy-rights/' className='hover:text-footer-blue after:content-["|"] after:px-1.5'>Your US State Privacy Rights</a></li>
+                            <li><a className='hover:text-footer-blue after:content-["|"] after:px-1.5'>Do Not Sell or Share My Personal Information</a></li>
+                            <li><a href='https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/' className='hover:text-footer-blue after:content-["|"] after:px-1.5'>Children's Online Privacy Policy</a></li>
+                            <li><a href='https://thewaltdisneycompany.com/?ppLink=pp_ds' className='hover:text-footer-blue after:content-["|"] after:px-1.5'>About Magic World</a></li>
                             <li><a href='https://preferences-mgr.truste.com/?aid=disneystore01&pid=disney01&type=disneystore' className='hover:text-footer-blue'>Internet-Based Ads</a></li>
-                            <li><a href='https://impact.disney.com/app/uploads/2022/01/California-Transparency-in-Supply-Chains-Act-1.pdf' className='hover:text-footer-blue'>California Transparency in Supply Chains Act</a></li>
+                            <li><a href='https://impact.disney.com/app/uploads/2022/01/California-Transparency-in-Supply-Chains-Act-1.pdf' className='hover:text-footer-blue after:content-["|"] after:px-1.5'>California Transparency in Supply Chains Act</a></li>
                         </ul>
                     </div>
                 </div>

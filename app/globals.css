@@ -4,16 +4,5 @@
 
 @font-face {
     font-family: 'AvenirNext';
-    src: url('/public/fonts/AvenirNextCyr-UltraLightIt.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.copyright-container ul li:first-child:after {
-    content: "|";
-}
-
-.copyright-container ul li:after {
-    content: "|";
-    padding: 0 6px;
+    src: url('../public/fonts/AvenirNextCyr-Light.ttf');
 }

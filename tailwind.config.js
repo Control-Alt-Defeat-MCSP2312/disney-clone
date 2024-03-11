@@ -4,6 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+
   ],
   theme: {
     extend: {
@@ -16,6 +17,8 @@ module.exports = {
       left: ['after', 'before'],
       letterSpacing: ['after', 'before'],
       backgroundImage: ['after', 'before'],
+      top: ['after', 'before'],
+
 
       colors: {
         'visa-blue': '#445fae',
@@ -30,7 +33,7 @@ module.exports = {
         'deep-grey': '#444',
         'helpful-color': '#ebf6fc',
         'stay-in-touch': '#222222',
-        'footer-color': '#253b56',
+        'footer-grey': '#253b56',
         'copyright': '#5b6c7d',
       },
       margin: {
@@ -75,6 +78,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        AvenirNext: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       fontWeight: {
@@ -82,6 +86,10 @@ module.exports = {
       },
       width: {
         'unset': 'unset',
+        '1px': '1px',
+      },
+      height: {
+        '90%': '90%',
       },
       maxWidth: {
         'unset': 'unset',
@@ -91,6 +99,7 @@ module.exports = {
         'review-number': '1.375rem',
       },
       spacing: {
+        'neg-1px': '-1px',
         'neg-30px': '-30px',
         'neg-24px': '-24px',
         'neg-15': '-15px',
@@ -110,6 +119,7 @@ module.exports = {
         '424px': '424px',
         '576px': '576px',
         '588px': '588px',
+        '5%': '5%'
       },
       letterSpacing: {
         wider: '.08em',
