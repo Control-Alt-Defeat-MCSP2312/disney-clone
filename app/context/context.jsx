@@ -91,13 +91,12 @@ export const StickySidebarProvider = ({ children }) => {
     
       const addToBag = () => {
         console.log("Button clicked!S")
-        if(bagCount >= 2){
+        if(bagCount + quantity > 2){
             alert("This item is limited to 2 per Guest. Please change the quantity in your bag.");
             return;
         }
         setBagCount((prevValue) => prevValue + quantity);
-        
-  };
+    }
   
     const values = {
       favoriteClicked,
