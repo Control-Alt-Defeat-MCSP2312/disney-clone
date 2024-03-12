@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-
+    "./node_modules/flowbite-react/lib/esm/**/*.js",
+    "./node_modules/flowbite-react/lib/**/*.js",
+    "./public/**/*.html",
   ],
   theme: {
     extend: {
@@ -35,6 +38,8 @@ module.exports = {
         'stay-in-touch': '#222222',
         'footer-grey': '#253b56',
         'copyright': '#5b6c7d',
+        'dark-charcoal': '#333333',
+
       },
       margin: {
         '10px': '10px',
@@ -50,6 +55,7 @@ module.exports = {
       padding: {
         '5px': '5px',
         '10px': '10px',
+        '13px': '13px',
         '15px': '15px',
         '20px': '20px',
         '21px': '21px',
@@ -61,6 +67,7 @@ module.exports = {
         '63px': '63px',
         '81px': '81px',
         '150px': '150px',
+        '50px': '50px',
       },
       boxShadow: {
         'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'
@@ -83,6 +90,7 @@ module.exports = {
       fontFamily: {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
         AvenirNext: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        AvenirNextLight: ['AvenirNextLight', 'AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       fontWeight: {
@@ -101,6 +109,9 @@ module.exports = {
       lineHeight: {
         'star': '1.3125rem',
         'review-number': '1.375rem',
+      },
+      borderWidth: {
+        '1px': '1px',
       },
       spacing: {
         'neg-1px': '-1px',
@@ -140,6 +151,7 @@ module.exports = {
       },
       zIndex: {
         '899': '899',
+        '1250': '1250',
       },
       borderRadius: {
         '3px': '3px',
@@ -148,6 +160,7 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-pseudo-elements'),
+    require('flowbite/plugin'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.clip-text': {
