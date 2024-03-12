@@ -44,8 +44,8 @@ module.exports = {
         '70px': '70px',
         '165.5px': '165.5px',
         '0.5625rem': '0.5625rem',
-        '0.9375em': '0.9375em'
-        'header': '0.84375rem'
+        '0.9375em': '0.9375em',
+        'header': '0.84375rem',
       },
       padding: {
         '5px': '5px',
