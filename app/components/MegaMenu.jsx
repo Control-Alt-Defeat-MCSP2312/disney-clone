@@ -242,7 +242,7 @@ const MegaMenu = () => {
                                         {category[0].name}
                                     </button>
                                     {hoveredItem === index && (
-                                        <div className='absolute w-full h-px bg-start-color bottom-0'></div>
+                                        <div className='absolute w-full h-2 bg-start-color bottom-0 left-1/2 transform -translate-x-1/2 origin-bottom duration-500'></div>
                                     )}
                                 </li>
                                 :
@@ -261,7 +261,7 @@ const MegaMenu = () => {
                                 >
                                     <a href="#" className="block font-extrabold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">{category[0].name}</a>
                                     {hoveredItem === index && (
-                                        <div className='absolute w-full h-2 bg-start-color bottom-0'></div>
+                                        <div className='absolute w-full h-2 bg-start-color bottom-0 left-1/2 transform -translate-x-1/2 origin-bottom duration-500'></div>
                                     )}
                                 </li>
                         ))}
