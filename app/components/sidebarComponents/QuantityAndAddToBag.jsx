@@ -10,18 +10,18 @@ const QuantityAndAddToBag = () => {
   }
 
   return (
-    <div className="px-4 p-2 mb-2 flex flex-col">
+    <div className="px-4 flex flex-col">
       <div className="mb-4 ml-12">
         <h3 className="text-md font-light text-black">Quantity</h3>
         <p className="text-gray-600 text-xs">The item is limited to 2 per Guest.</p>
         <div className="flex mt-2">
           <button
             onClick={handleDecrement}
-            className="border-solid border-2 border-slate-300 text-slate-300 rounded-full px-2 h-6 w-6"
+            className="border-solid border-2 border-slate-300 text-slate-300 rounded-full px- h-6 w-6"
           >
             -
           </button>
-          <span className="mx-2 font-normal text-sm text-gray-900">{quantity}</span>
+          <span className="mx-6 font-normal text-md text-gray-900">{quantity}</span>
           <button
             onClick={handleIncrement}
             className="border-solid border-2 border-slate-300 text-slate-300 rounded-full px-2 h-6 w-6"
