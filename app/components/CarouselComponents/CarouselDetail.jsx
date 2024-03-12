@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function CarouselDetail({ product }) {
+export default function CarouselDetail({ product, key }) {
   const [hover, setHover] = useState(false);
 
   function handleClick() {
@@ -12,9 +12,10 @@ export default function CarouselDetail({ product }) {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Ensure flex column layout */}
-      <div className="flex items-center justify-center w-full mb-4">
+      <div className="flex items-center justify-center ">
         <img
-          className="size-64"
+          className="size-80 mr-1"
+          key={key}
           src={product.src}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}

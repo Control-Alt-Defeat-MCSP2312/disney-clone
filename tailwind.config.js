@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite-react/lib/esm/**/*.js",
+    "./node_modules/flowbite-react/lib/**/*.js",
+    "./public/**/*.html",
+
   ],
   theme: {
     extend: {
@@ -23,12 +28,7 @@ module.exports = {
         'zinc-grey-header': '#222',
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
-        'load-more': '#7a7a7a',
-        'sign-up-hover': '#285ba3',
-        'footer-blue': '#4385E0',
-        'prop-details-grey': '#6a7889',
-        'deep-grey': '#444',
-        'helpful-color': '#ebf6fc',
+        'dark-charcoal': '#333333',
       },
       margin: {
         '10px': '10px',
@@ -41,10 +41,12 @@ module.exports = {
       padding: {
         '5px': '5px',
         '10px': '10px',
+        '13px': '13px',
         '15px': '15px',
         '25px': '25px',
         '30px': '30px',
         '41px': '41px',
+        '50px': '50px',
       },
       boxShadow: {
         'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'
@@ -65,6 +67,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        AvenirNext: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        AvenirNextLight: ['AvenirNextLight', 'AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       fontWeight: {
@@ -79,6 +83,9 @@ module.exports = {
       lineHeight: {
         'star': '1.3125rem',
         'review-number': '1.375rem',
+      },
+      borderWidth: {
+        '1px': '1px',
       },
       spacing: {
         'neg-30px': '-30px',
@@ -116,11 +123,13 @@ module.exports = {
       },
       zIndex: {
         '899': '899',
+        '1250': '1250',
       },
     },
   },
   plugins: [
     require('tailwindcss-pseudo-elements'),
+    require('flowbite/plugin'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.clip-text': {
