@@ -2,7 +2,6 @@
 
 import React from "react";
 import ReactStars from "react-stars";
-import PropTypes from "prop-types";
 const reviews = { href: "#", average: 4.5, totalCount: 10 };
 
 const ReviewsButton = () => {
@@ -11,11 +10,10 @@ const ReviewsButton = () => {
     <>
       <div
         id="reviews"
-        className="mt-4 px-6 bg-gray text-[#0063e5] mb-6"
+        className="mt-4 px-6 bg-gray text-[#0063e5]"
       >
 
         <div className="flex ml-auto">
-          {/* Stars */}
           <div className="flex">
             <ReactStars
               count={5}
