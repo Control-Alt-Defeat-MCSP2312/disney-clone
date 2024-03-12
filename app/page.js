@@ -25,14 +25,15 @@ export default function Home() {
             <div className="product-detail-media-section block mr-576px relative">
               <PrimaryImage />
             </div>
-          <div className="sticky-side-rail-content block w-576px bg-sticky-gradient z-899 absolute top-0 bottom-0 right-0 m-0 shadow-none">
-            <StickySidebar />
-          </div>
-          <div className="product-detail-details-section mr-576px">
-            <ActiveProvider>
-              <ProductDetails />
-            </ActiveProvider>
-            <YMAL />
+            <div className="sticky-side-rail-content block w-576px bg-sticky-gradient z-899 absolute top-0 bottom-0 right-0 m-0 shadow-none">
+              <StickySidebar />
+            </div>
+            <div className="product-detail-details-section mr-576px">
+              <ActiveProvider>
+                <ProductDetails />
+              </ActiveProvider>
+              <YMAL />
+            </div>
           </div>
           <Shipping />
         </div>
