@@ -8,7 +8,6 @@ module.exports = {
     "./node_modules/flowbite-react/lib/esm/**/*.js",
     "./node_modules/flowbite-react/lib/**/*.js",
     "./public/**/*.html",
-
   ],
   theme: {
     extend: {
@@ -21,6 +20,8 @@ module.exports = {
       left: ['after', 'before'],
       letterSpacing: ['after', 'before'],
       backgroundImage: ['after', 'before'],
+      top: ['after', 'before'],
+
 
       colors: {
         'visa-blue': '#445fae',
@@ -28,7 +29,17 @@ module.exports = {
         'zinc-grey-header': '#222',
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
+        'load-more': '#7a7a7a',
+        'sign-up-hover': '#285ba3',
+        'footer-blue': '#4385E0',
+        'prop-details-grey': '#6a7889',
+        'deep-grey': '#444',
+        'helpful-color': '#ebf6fc',
+        'stay-in-touch': '#222222',
+        'footer-grey': '#253b56',
+        'copyright': '#5b6c7d',
         'dark-charcoal': '#333333',
+
       },
       margin: {
         '10px': '10px',
@@ -36,16 +47,26 @@ module.exports = {
         '13.5px': '13.5px',
         '30px': '30px',
         '70px': '70px',
-        'header': '0.84375rem'
+        '165.5px': '165.5px',
+        '0.5625rem': '0.5625rem',
+        '0.9375em': '0.9375em',
+        'header': '0.84375rem',
       },
       padding: {
         '5px': '5px',
         '10px': '10px',
         '13px': '13px',
         '15px': '15px',
+        '20px': '20px',
+        '21px': '21px',
         '25px': '25px',
         '30px': '30px',
         '41px': '41px',
+        '45px': '45px',
+        '60px': '60px',
+        '63px': '63px',
+        '81px': '81px',
+        '150px': '150px',
         '50px': '50px',
       },
       boxShadow: {
@@ -63,6 +84,7 @@ module.exports = {
         '4xl': '2.441rem',
         '5xl': '3.052rem',
         'smol': '17px',
+        'hundred': '5.9375rem',
         'header-bullet': '2.8125rem'
       },
       fontFamily: {
@@ -76,6 +98,10 @@ module.exports = {
       },
       width: {
         'unset': 'unset',
+        '1px': '1px',
+      },
+      height: {
+        '90%': '90%',
       },
       maxWidth: {
         'unset': 'unset',
@@ -88,6 +114,7 @@ module.exports = {
         '1px': '1px',
       },
       spacing: {
+        'neg-1px': '-1px',
         'neg-30px': '-30px',
         'neg-24px': '-24px',
         'neg-15': '-15px',
@@ -107,6 +134,7 @@ module.exports = {
         '424px': '424px',
         '576px': '576px',
         '588px': '588px',
+        '5%': '5%'
       },
       letterSpacing: {
         wider: '.08em',
@@ -125,6 +153,9 @@ module.exports = {
         '899': '899',
         '1250': '1250',
       },
+      borderRadius: {
+        '3px': '3px',
+      }
     },
   },
   plugins: [
