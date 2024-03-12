@@ -1,10 +1,12 @@
-import React from 'react';
-import DisneyLogoComponent from '../../public/disney-store-logo.svg';
+import React, { useContext } from 'react';
 import UserComponent from '../../public/header/user.svg';
 import DisneyBagComponent from '../../public/header/disney-bag.svg';
 import WishListComponent from '../../public/header/wish-list-heart.svg';
+import DisneyLogoComponent from '../../public/disney-store-logo.svg'
+import AppContext from '../context/context';
 
-const Header = ({ wishlistCount, bagCount }) => {
+const Header = () => {
+    const { wishlistCount, bagCount } = useContext(AppContext)
     // wishlistCount and bagCount are what I plan on using to update the number next to My Wish List / My Bag
     return (
         <div className='border-b'>
@@ -41,12 +43,12 @@ const Header = ({ wishlistCount, bagCount }) => {
                     {/*  Planning on using wishlistCount state here for when heart is clicked */}
                     <a className='flex items-center mr-5' href='https://www.disneystore.com/wish-list'>
                         <WishListComponent className='mr-2 text-start-color' width='21px' height='22px' />
-                        <div className='mx-1'>My Wish List (0)</div>
+                        <div className='mx-1'>My Wish List ({wishlistCount})</div>
                     </a>
                     {/*  Planning on using bagCount state here for add to bag is clicked */}
                     <a className='flex ml-2 items-center' href='https://www.disneystore.com/my-bag'>
                         <DisneyBagComponent className='text-start-color' width='24px' height='24px' />
-                        <div className='mx-1'>My Bag (0)</div>
+                        <div className='mx-1'>My Bag ({bagCount})</div>
                     </a>
                 </div>
             </div>

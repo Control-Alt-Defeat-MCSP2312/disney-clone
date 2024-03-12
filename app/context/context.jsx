@@ -65,21 +65,63 @@ export function ActiveProvider({ children }) {
 
 
 
-export const StickySidebarProvider = ({children}) => {
+export const StickySidebarProvider = ({ children }) => {
     const [favoriteClicked, setFavoriteClicked] = useState(false);
     const [addCartClicked, setAddCartClicked] = useState(false);
+    const [wishlistCount, setWishlistCount] = useState(0);
+    const [bagCount, setBagCount] = useState(0);
+    const [quantity, setQuantity] = useState(1)
 
-    return (
-        <AppContext.Provider
-          value={{
-            favoriteClicked,
-            addCartClicked,
-            setFavoriteClicked,
-            setAddCartClicked,
-          }}
-        >
-          {children}
-        </AppContext.Provider>
-      );
+    const addToFavorites = () => {
+        if(!favoriteClicked){
+            setWishlistCount(1)
+        } else {
+            setWishlistCount(0)
+        }
+        setFavoriteClicked((prevValue) => !prevValue);
+    }
+  
+    const handleIncrement = () => {
+        setQuantity((prevQuantity) => Math.min(prevQuantity + 1, 2));
+      };
+    
+      const handleDecrement = () => {
+        setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
+      };
+    
+      const addToBag = () => {
+        console.log("Button clicked!S")
+        if(bagCount >= 2){
+            alert("This item is limited to 2 per Guest. Please change the quantity in your bag.");
+            return;
+        }
+        setBagCount((prevValue) => prevValue + quantity);
+        
+  };
+  
+    const values = {
+      favoriteClicked,
+      addCartClicked,
+      quantity,
+      setFavoriteClicked,
+      setAddCartClicked,
+      wishlistCount,
+      setWishlistCount,
+      bagCount,
+      setQuantity,
+      setBagCount,
+      addToFavorites,
+    handleIncrement,
+    handleDecrement,
+    addToBag,
     };
+  
+    return (
+      <AppContext.Provider value={values}>
+        {children}
+      </AppContext.Provider>
+    );
+  };
+  
+  
 export default AppContext;
