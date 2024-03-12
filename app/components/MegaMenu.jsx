@@ -10,6 +10,7 @@ import StandardComponent from './NavBarComponents/StandardComponent';
 
 const MegaMenu = () => {    
     const [isOpen, setIsOpen] = useState(false);
+    const [hoveredItem, setHoveredItem] = useState(null);
     
     const newTrendMenu = [
         {
@@ -223,22 +224,45 @@ const MegaMenu = () => {
                                     key={index}
                                     onMouseEnter={() => {
                                         setIsOpen(category[0].name)
+                                        setHoveredItem(index);
                                     }}
                                     onMouseLeave={(e) => {
                                         const relatedTarget = e.relatedTarget || e.toElement;
                                         if (!relatedTarget || !relatedTarget.closest('#mega-menu-full-dropdown')) {
                                             setIsOpen(false);
+                                            setHoveredItem(null);
                                         }
                                     }}
-                                    className="relative p-25px"
+                                    className="relative group p-25px"
                                 >
-                                    <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" className="uppercase justify-between w-full p-50px font-extrabold border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                                    <button 
+                                        id="mega-menu-full-dropdown-button"
+                                        data-collapse-toggle="mega-menu-full-dropdown"
+                                        className="uppercase justify-between w-full p-50px font-extrabold border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
                                         {category[0].name}
                                     </button>
+                                    {hoveredItem === index && (
+                                        <div className='absolute w-full h-px bg-start-color bottom-0'></div>
+                                    )}
                                 </li>
                                 :
-                                <li key={index} className='p-25px'>
+                                <li 
+                                    key={index}
+                                    className='relative group p-25px'
+                                    onMouseEnter={() => {
+                                        setHoveredItem(index);
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        const relatedTarget = e.relatedTarget || e.toElement;
+                                        if (!relatedTarget || !relatedTarget.closest('#mega-menu-full-dropdown')) {
+                                            setHoveredItem(null);
+                                        }
+                                    }}
+                                >
                                     <a href="#" className="block font-extrabold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">{category[0].name}</a>
+                                    {hoveredItem === index && (
+                                        <div className='absolute w-full h-2 bg-start-color bottom-0'></div>
+                                    )}
                                 </li>
                         ))}
                     </ul>

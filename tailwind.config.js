@@ -68,6 +68,7 @@ module.exports = {
       fontFamily: {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
         AvenirNext: ['AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
+        AvenirNextLight: ['AvenirNextLight', 'AvenirNext', 'Helvetica', 'Arial', 'sans-serif'],
         times: ['Times']
       },
       fontWeight: {
