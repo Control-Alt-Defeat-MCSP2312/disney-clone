@@ -4,7 +4,6 @@ import AppContext from '../context/context.jsx';
 import ProductDetailsText from './ProductDetailsText.jsx';
 import ProductDetailsButtons from './ProductDetailsButtons.jsx';
 import ShippingText from './ShippingText.jsx';
-// import Reviews from './Reviews.jsx';
 import Shipping from './Shipping.jsx';
 import Reviews from './Reviews.jsx';
 import { ReviewProvider } from '../context/context.jsx';
@@ -23,6 +22,9 @@ export default function ProductDetails() {
           <div className="products-tabs-details-container relative max-w-full pl-0 font-light">
             {isActive === "details" && <ProductDetailsText />}
             {isActive === "shipping" && <ShippingText />}
+            <ReviewProvider>
+              {isActive === "reviews" && <Reviews />}
+            </ReviewProvider>
           </div>
         </div>
       </div>

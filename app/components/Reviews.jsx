@@ -15,7 +15,7 @@ const Reviews = () => {
 
     useEffect(() => {
         setDisplayedReviews(reviews.reviews.slice(0, displayedCount));
-    }, [displayedCount])
+    }, [displayedCount, reviews])
 
     // Set total item reviews and how many reviews to display initially
     const totalReviews = reviews.reviews.length; // 10
@@ -92,7 +92,7 @@ const Reviews = () => {
                     </div>
                     {dropdownToggle && (
 
-                        <div className='absolute bg-white border border-gray-300'>
+                        <div className='absolute bg-white border border-gray-300 font-sans'>
                             <div onClick={() => handleSortingChange('most-helpful')}>Most Helpful</div>
                             <div onClick={() => handleSortingChange('high-to-low')}>Highest to Lowest Rating</div>
                             <div onClick={() => handleSortingChange('low-to-high')}>Lowest to Highest Rating</div>
