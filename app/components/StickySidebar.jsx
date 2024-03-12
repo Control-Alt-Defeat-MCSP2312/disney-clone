@@ -17,10 +17,9 @@ const product = {
 };
 export default function StickySidebar() {
   return (
-
-<div className="bg-stone-50 h-full col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 place-content-start">
-      <div className="sticky top-0 overflow-y-auto">
-        <div className="flex-grow max-w-full relative p-10 font-sans">
+    <div className="h-full col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 place-content-start">
+      <div className="sticky top-0 overflow-y-auto ">
+        <div className="flex-grow relative p-10 font-sans text-left flex flex-col ">
           {/* Breadcrumbs and Title */}
           <div>
             <ol className="flex mb-6 p-8 sm:mb-4">
@@ -37,38 +36,23 @@ export default function StickySidebar() {
               ))}
             </ol>
           </div>
-          {/* Title */}
-          <div className="mx-auto max-w-sm p-8 sm:px-6">
+          <div className="mx-auto max-w-fit p-8 sm:px-6">
             <h1 className="text-6xl font-light tracking-tight text-left text-gray-900 sm:text-3xl">
               {product.name}
             </h1>
           </div>
-
-          {/* Price and Discount */}
-          <span className="flex gap-5 text-2xl px-4 font-extralight">
+          <span className="flex gap-5 text-lg px-4 font-extralight">
             <p className="text-gray-900 line-through">{product.price}</p>
             <p className="text-red-500">{product.discounted}</p>
           </span>
-
-          {/* Reviews */}
           <ReviewsButton />
         </div>
-
-        {/* Quantity Section */}
-        <QuantityAndAddToBag />
-
-        {/* Price and Button content */}
-        <div className="mx-auto max-w-2xl px-4">
-          <span className="flex">
-            <FavoritesButton />
-          </span>
+        <div className="flex mt-4">
+          <QuantityAndAddToBag />
         </div>
-
       </div>
     </div>
-
-
-    
   );
 }
+
 
