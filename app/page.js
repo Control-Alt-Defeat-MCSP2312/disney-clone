@@ -15,18 +15,23 @@ import {
   ReviewProvider,
   StickySidebarProvider,
 } from "./context/context.jsx";
+import AccessoriesNavBar from "./components/AccessoriesNavBar.jsx";
+import Navbar from './components/NavBar.jsx';
 
 export default function Home() {
   return (
+    <>
     <div className="antialiased">
       <StickySidebarProvider>
         <Header />
+        <Navbar />
+        {/* <AccessoriesNavBar/> */}
         <div className="pdp-detail max-w-full m-0 p-0 relative ">
           <div className="product-detail-content-section relative flex flex-col">
-            <div className="product-detail-media-section block mr-576px relative">
+            <div className="product-detail-media-section block mr-576px relative z-0">
               <PrimaryImage />
             </div>
-            <div className="sticky-side-rail-content block w-576px bg-sticky-gradient z-899 absolute top-0 bottom-0 right-0 m-0 shadow-none">
+            <div className="sticky-side-rail-content block w-576px bg-sticky-gradient absolute top-0 bottom-0 right-0 m-0 shadow-none">
               <StickySidebar />
             </div>
             <div className="product-detail-details-section mr-576px">
@@ -46,5 +51,5 @@ export default function Home() {
         <Footer />
       </StickySidebarProvider>
     </div>
-  );
-}
+  </>    
+  )}

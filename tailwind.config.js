@@ -30,6 +30,9 @@ module.exports = {
         'deep-grey': '#444',
         'helpful-color': '#ebf6fc',
       },
+      zIndex: {
+        '900': '900', 
+      },
       margin: {
         '10px': '10px',
         '5px': '5px',
@@ -75,6 +78,13 @@ module.exports = {
       },
       maxWidth: {
         'unset': 'unset',
+      },
+      borderColor: theme => ({
+        DEFAULT: theme('colors.gray.200', 'currentColor'),
+        custom: 'rgba(0, 0, 0, 0.1)',
+      }),
+      borderWidth: {
+        '1.25': '1.25px', 
       },
       lineHeight: {
         'star': '1.3125rem',
