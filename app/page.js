@@ -42,6 +42,7 @@ export default function Home() {
         <ShopMore />
         <AdvertisementBanner />
         <Footer />
+      </div>
       </StickySidebarProvider>
     </div>
   );

@@ -92,7 +92,7 @@ const Reviews = () => {
                     </div>
                     {dropdownToggle && (
 
-                        <div className='absolute bg-white border border-gray-300 font-sans'>
+                        <div className='absolute space-y-1 bg-white border border-reviews-grey font-AvenirNext p-2.5 rounded-sm'>
                             <div onClick={() => handleSortingChange('most-helpful')}>Most Helpful</div>
                             <div onClick={() => handleSortingChange('high-to-low')}>Highest to Lowest Rating</div>
                             <div onClick={() => handleSortingChange('low-to-high')}>Lowest to Highest Rating</div>

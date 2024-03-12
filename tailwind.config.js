@@ -29,6 +29,7 @@ module.exports = {
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
         'dark-charcoal': '#333333',
+        'reviews-grey': '#cccccc',
       },
       margin: {
         '10px': '10px',
