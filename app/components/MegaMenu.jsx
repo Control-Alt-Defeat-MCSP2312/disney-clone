@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import NewTrendingComponent from './NavBarComponents/NewTrendingComponent';
-import SaleComponent from './NavBarComponents/SaleComponent';
-import ToyShopComponent from './NavBarComponents/ToyShopComponent';
-import AccessoriesComponent from './NavBarComponents/AccessoriesComponent';
 import ClothingComponent from './NavBarComponents/ClothingComponent';
-import VacationComponent from './NavBarComponents/VacationComponent';
-import HomeComponent from './NavBarComponents/HomeComponent';
 import StandardComponent from './NavBarComponents/StandardComponent';
 
 const MegaMenu = () => {    
