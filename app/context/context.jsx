@@ -1,7 +1,7 @@
 'use client'
 import { createContext, useState } from 'react';
 
-// Import AppContext into your component along with useContent to access state
+// Import AppContext into your component along with useContext to access state
 const AppContext = createContext();
 
 /****************Context functions****************/
@@ -40,4 +40,87 @@ export function ReviewProvider({ children }) {
     );
 }
 
+// Context for Product Details Button Bar
+export function ActiveProvider({ children }) {
+    const [isActive, setIsActive] = useState('details');
+    const [isCollapsed, setIsCollapsed] = useState(true);
+
+    const changeIsActive = (id) => {
+        setIsActive(id);
+    }
+    const changeCollapsed = () => {
+        setIsCollapsed(!isCollapsed);
+    }
+    return (
+        <AppContext.Provider value={{
+            isActive,
+            changeIsActive,
+            isCollapsed,
+            changeCollapsed,
+        }}>
+            {children}
+        </AppContext.Provider>
+    );
+}
+
+
+
+export const StickySidebarProvider = ({ children }) => {
+    const [favoriteClicked, setFavoriteClicked] = useState(false);
+    const [addCartClicked, setAddCartClicked] = useState(false);
+    const [wishlistCount, setWishlistCount] = useState(0);
+    const [bagCount, setBagCount] = useState(0);
+    const [quantity, setQuantity] = useState(1)
+
+    const addToFavorites = () => {
+        if(!favoriteClicked){
+            setWishlistCount(1)
+        } else {
+            setWishlistCount(0)
+        }
+        setFavoriteClicked((prevValue) => !prevValue);
+    }
+  
+    const handleIncrement = () => {
+        setQuantity((prevQuantity) => Math.min(prevQuantity + 1, 2));
+      };
+    
+      const handleDecrement = () => {
+        setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
+      };
+    
+      const addToBag = () => {
+        console.log("Button clicked!S")
+        if(bagCount + quantity > 2){
+            alert("This item is limited to 2 per Guest. Please change the quantity in your bag.");
+            return;
+        }
+        setBagCount((prevValue) => prevValue + quantity);
+    }
+  
+    const values = {
+      favoriteClicked,
+      addCartClicked,
+      quantity,
+      setFavoriteClicked,
+      setAddCartClicked,
+      wishlistCount,
+      setWishlistCount,
+      bagCount,
+      setQuantity,
+      setBagCount,
+      addToFavorites,
+    handleIncrement,
+    handleDecrement,
+    addToBag,
+    };
+  
+    return (
+      <AppContext.Provider value={values}>
+        {children}
+      </AppContext.Provider>
+    );
+  };
+  
+  
 export default AppContext;
