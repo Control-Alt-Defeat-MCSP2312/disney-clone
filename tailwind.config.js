@@ -112,6 +112,7 @@ module.exports = {
       },
       borderWidth: {
         '1px': '1px',
+        '5px': '5px',
       },
       spacing: {
         'neg-1px': '-1px',
@@ -120,6 +121,7 @@ module.exports = {
         'neg-15': '-15px',
         '19px': '-19px',
         '4px': '4px',
+        '5px': '5px',
         '10px': '10px',
         '15px': '15px',
         '30px': '30px',
@@ -155,6 +157,15 @@ module.exports = {
       },
       borderRadius: {
         '3px': '3px',
+      },
+      transitionProperty: {
+        'w': 'width 80%',
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       }
     },
   },
