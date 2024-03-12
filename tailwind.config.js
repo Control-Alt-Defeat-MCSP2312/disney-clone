@@ -19,7 +19,7 @@ module.exports = {
 
       colors: {
         'visa-blue': '#445fae',
-        'zinc-grey': '#222222db',
+        'zinc-grey': '#222222ed',
         'zinc-grey-header': '#222',
         'start-color': '#0075e3',
         'end-color': '#cbe3f9',
@@ -33,6 +33,10 @@ module.exports = {
       margin: {
         '10px': '10px',
         '5px': '5px',
+        '13.5px': '13.5px',
+        '30px': '30px',
+        '70px': '70px',
+        'header': '0.84375rem'
       },
       padding: {
         '5px': '5px',
@@ -40,6 +44,7 @@ module.exports = {
         '15px': '15px',
         '25px': '25px',
         '30px': '30px',
+        '41px': '41px',
       },
       boxShadow: {
         'helpful': 'inset 0 0 5px rgba(0, 0, 0, 0.2'
@@ -56,6 +61,7 @@ module.exports = {
         '4xl': '2.441rem',
         '5xl': '3.052rem',
         'smol': '17px',
+        'header-bullet': '2.8125rem'
       },
       fontFamily: {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
@@ -64,23 +70,35 @@ module.exports = {
       fontWeight: {
         '500': '500',
       },
+      width: {
+        'unset': 'unset',
+      },
+      maxWidth: {
+        'unset': 'unset',
+      },
       lineHeight: {
         'star': '1.3125rem',
         'review-number': '1.375rem',
       },
       spacing: {
         'neg-30px': '-30px',
+        'neg-24px': '-24px',
         'neg-15': '-15px',
         '19px': '-19px',
         '4px': '4px',
         '10px': '10px',
         '15px': '15px',
         '30px': '30px',
+        '50px': '50px',
+        '108px': '108px',
         '113px': '113px',
+        '280px': '280px',
+        '292px': '292px',
         '300px': '300px',
         '346px': '346px',
         '384px': '384px',
         '424px': '424px',
+        '576px': '576px',
         '588px': '588px',
       },
       letterSpacing: {
