@@ -1,21 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import AppContext from "@/app/context/context";
+import React, { useContext, useState } from "react";
 
 const FavoritesButton = () => {
-  const [isHeartClicked, setIsHeartClicked] = useState(false);
+  const {favoriteClicked, addToFavorites} = useContext(AppContext)
+
   const handleHeartClick = () => {
-    setIsHeartClicked((prevValue) => !prevValue);
-  };
+    addToFavorites();
+    };
   return (
     <>
       <div onClick={handleHeartClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill={isHeartClicked ? "#0063e5" : "white"}
+          fill={favoriteClicked ? "#0063e5" : "white"}
           viewBox="0 -6 28 20"
           strokeWidth="1"
           stroke="#0063e5"
-          className="w-20 h-24 ml-6"
+          className="w-20 h-24 ml-6 sm:w-24 sm:h-28 md:w-28 md:h-32"
         >
           <path
             strokeLinecap="round"

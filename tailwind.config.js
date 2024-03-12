@@ -39,10 +39,13 @@ module.exports = {
       margin: {
         '10px': '10px',
         '5px': '5px',
+        '13.5px': '13.5px',
+        '30px': '30px',
         '70px': '70px',
         '165.5px': '165.5px',
         '0.5625rem': '0.5625rem',
         '0.9375em': '0.9375em'
+        'header': '0.84375rem'
       },
       padding: {
         '5px': '5px',
@@ -75,6 +78,7 @@ module.exports = {
         '5xl': '3.052rem',
         'smol': '17px',
         'hundred': '5.9375rem',
+        'header-bullet': '2.8125rem'
       },
       fontFamily: {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
