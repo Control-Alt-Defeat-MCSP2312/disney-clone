@@ -235,9 +235,7 @@ const MegaMenu = () => {
                                         className="uppercase justify-between w-full p-50px font-extrabold border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
                                         {category[0].name}
                                     </button>
-                                    {hoveredItem === index && (
-                                        <div className='absolute w-full h-2 bg-start-color bottom-0 left-1/2 transform -translate-x-1/2 origin-bottom duration-500'></div>
-                                    )}
+                                    <div className={`absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform transition-transform duration-1000 ease-in-out ${hoveredItem === index ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'} origin-center`}></div>
                                 </li>
                                 :
                                 <li
@@ -254,9 +252,7 @@ const MegaMenu = () => {
                                     }}
                                 >
                                     <a href="#" className="block font-extrabold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">{category[0].name}</a>
-                                    {hoveredItem === index && (
-                                        <div className='absolute w-full h-2 bg-start-color bottom-0 left-1/2 transform -translate-x-1/2 origin-bottom duration-500'></div>
-                                    )}
+                                    <div className={`absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform transition-transform duration-1000 ease-in-out ${hoveredItem === index ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'} origin-center`}></div>
                                 </li>
                         ))}
                     </ul>
