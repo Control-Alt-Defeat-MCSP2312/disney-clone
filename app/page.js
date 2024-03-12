@@ -11,12 +11,14 @@ import MoreToExplore from "./components/CarouselComponents/MoreToExplore.jsx";
 import YMAL from "./components/CarouselComponents/YMAL.jsx";
 import ShopMore from "./components/ShopMore.jsx";
 import { ActiveProvider, ReviewProvider } from "./context/context.jsx";
+import MegaMenu from './components/MegaMenu.jsx';
 
 
 export default function Home() {
   return (
     <div className="antialiased">
       <Header />
+      <MegaMenu />
       <div className="pdp-detail max-w-full m-0 p-0 relative ">
         <div className="product-detail-content-section relative flex flex-col">
           <div className="product-detail-media-section block mr-576px relative">

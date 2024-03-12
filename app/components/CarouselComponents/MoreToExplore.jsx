@@ -130,7 +130,7 @@ export default function MoreToExplore() {
   // this is where the .map was
   const product = productData
     .slice(0, 6)
-    .map((item) => <CarouselDetail product={item} />);
+    .map((item, index) => <CarouselDetail key={index} product={item} />);
 
   return (
     <div className="flex flex-col">
