@@ -1,6 +1,7 @@
 import { Inter, Prompt } from "next/font/google";
 import "./globals.css";
 import React from 'react';
+import Head from "next/head";
 
 const prompt = Prompt({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -14,8 +15,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <>
+    
       <html lang="en">
+        <Head><link rel="icon" href="/favicon.ico" /></Head>
         <body className={prompt.className}>{children}</body>
       </html>
+    </>
+    
   );
 }
